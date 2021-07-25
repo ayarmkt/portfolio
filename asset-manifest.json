@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/ayarmkt/react-portfolio.git/static/css/main.352ccba8.chunk.css",
+    "main.js": "/ayarmkt/react-portfolio.git/static/js/main.25ec762b.chunk.js",
+    "main.js.map": "/ayarmkt/react-portfolio.git/static/js/main.25ec762b.chunk.js.map",
+    "runtime-main.js": "/ayarmkt/react-portfolio.git/static/js/runtime-main.1d5a7d94.js",
+    "runtime-main.js.map": "/ayarmkt/react-portfolio.git/static/js/runtime-main.1d5a7d94.js.map",
+    "static/js/2.673d2426.chunk.js": "/ayarmkt/react-portfolio.git/static/js/2.673d2426.chunk.js",
+    "static/js/2.673d2426.chunk.js.map": "/ayarmkt/react-portfolio.git/static/js/2.673d2426.chunk.js.map",
+    "static/js/3.6f3adbe6.chunk.js": "/ayarmkt/react-portfolio.git/static/js/3.6f3adbe6.chunk.js",
+    "static/js/3.6f3adbe6.chunk.js.map": "/ayarmkt/react-portfolio.git/static/js/3.6f3adbe6.chunk.js.map",
+    "index.html": "/ayarmkt/react-portfolio.git/index.html",
+    "static/css/main.352ccba8.chunk.css.map": "/ayarmkt/react-portfolio.git/static/css/main.352ccba8.chunk.css.map",
+    "static/js/2.673d2426.chunk.js.LICENSE.txt": "/ayarmkt/react-portfolio.git/static/js/2.673d2426.chunk.js.LICENSE.txt",
+    "static/media/profile-pic.380f3b72.png": "/ayarmkt/react-portfolio.git/static/media/profile-pic.380f3b72.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1d5a7d94.js",
+    "static/js/2.673d2426.chunk.js",
+    "static/css/main.352ccba8.chunk.css",
+    "static/js/main.25ec762b.chunk.js"
+  ]
+}
