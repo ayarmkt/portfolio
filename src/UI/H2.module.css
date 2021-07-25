@@ -1,0 +1,28 @@
+:root {
+  --navy: #193980;
+  --lightblue: #27ccd8;
+  --gray: #645c5c;
+}
+
+.h2 {
+  font-size: 50px;
+  font-weight: 800;
+  margin-bottom: 25px;
+  background: linear-gradient(var(--navy), var(--lightblue));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid blue;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1024px) {
+  .h2 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+}

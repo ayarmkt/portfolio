@@ -1,0 +1,77 @@
+:root {
+  --navy: #193980;
+  --lightblue: #27ccd8;
+  --gray: #645c5c;
+}
+
+nav {
+  border: 1px solid red;
+  padding: 0 200px;
+
+  height: 50px;
+  max-width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  display: inline;
+  float: left;
+  /* justify-self: right; */
+  /* display: none; */
+}
+
+li a {
+  display: block;
+  color: var(--gray);
+  text-align: center;
+  padding: 15px 25px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: var(--lightblue);
+  color: white;
+}
+
+.hamburger-menu {
+  margin: auto 0;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  margin: 6px 0;
+  background-color: var(--gray);
+  display: none;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1224px) {
+  nav {
+    padding: 0 150px;
+  }
+}
+
+@media (max-width: 1024px) {
+  li {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    padding: 0 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 480px) {
+}

@@ -1,0 +1,72 @@
+:root {
+  --navy: #193980;
+  --lightblue: #27ccd8;
+  --gray: #645c5c;
+}
+
+.skills {
+  border: 1px solid red;
+}
+
+.skills-list-container {
+  background-color: var(--gray);
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.skills-list {
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 1fr;
+}
+
+.skills-list > * {
+  /* background: rgba(0, 0, 0, 0.1); */
+  /* border: 1px white solid; */
+}
+
+.skills-list::before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.skills-list > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.skill {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill p {
+  color: var(--gray);
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.html:hover {
+  color: #e34f26;
+}
+
+.css:hover {
+  color: #264de4;
+}
+
+.javascript:hover {
+  color: #f7df1e;
+}
+
+.react:hover {
+  color: #00d8ff;
+}
