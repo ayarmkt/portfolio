@@ -1,24 +1,32 @@
-:root {
+/* :root {
   --navy: #193980;
   --lightblue: #27ccd8;
   --gray: #645c5c;
-}
+} */
 
 .about {
   display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: minmax(1fr, 100px) 1fr;
-  border: 1px solid red;
+  grid-template-columns: 2fr 1fr;
+  /* border: 1px solid red; */
   padding-top: 150px;
   height: auto;
 }
 
-.title {
+.text-content {
   grid-column: 1;
+  display: grid;
+  /* grid-template-rows: minmax(1fr, 100px) 1fr; */
+  grid-template-rows: 1fr 1.5fr;
+}
+
+.title {
+  /* grid-column: 1; */
   grid-row: 1;
   font-size: 100px;
   font-weight: 800;
-  background: linear-gradient(var(--navy), var(--lightblue));
+  /* background: linear-gradient(var(--navy), var(--lightblue)); */
+  background: linear-gradient(var(--royalblue), var(--lightblue));
+  /* background: linear-gradient(var(--blue), var(--lightblue)); */
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
@@ -26,16 +34,16 @@
   -webkit-text-fill-color: transparent;
   text-align: flex-start;
   margin-bottom: 50px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .text {
-  grid-column: 1;
+  /* grid-column: 1; */
   grid-row: 2;
   font-size: 22px;
   color: var(--gray);
   padding-right: 15px;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .text p {
@@ -44,13 +52,13 @@
 
 br {
   line-height: 20%;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .profile-pic {
   grid-column: 2;
   grid-row: span 2;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +66,8 @@ br {
 
 .profile-pic img {
   width: 300px;
-  border: 1px solid blue;
+  filter: drop-shadow(20px 20px 0 var(--yellow));
+  /* border: 1px solid blue; */
 }
 
 /*  */

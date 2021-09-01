@@ -1,7 +1,10 @@
 :root {
   --navy: #193980;
+  --blue: #5693d2;
+  --royalblue: #264de4;
   --lightblue: #27ccd8;
   --gray: #645c5c;
+  --yellow: #f9d249;
 }
 
 * {
@@ -9,6 +12,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  /* outline: 1px solid red; */
 }
 
 header {

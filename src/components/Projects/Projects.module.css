@@ -1,11 +1,11 @@
-:root {
+/* :root {
   --navy: #193980;
   --lightblue: #27ccd8;
   --gray: #645c5c;
-}
+} */
 
 .projects {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .projects-list {
@@ -28,7 +28,7 @@
 }
 
 .project {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,14 +38,14 @@
 .project-text {
   padding: 2px;
   text-align: center;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 .project-img {
   border-radius: 10px;
   height: 70%;
   width: 70%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .project-img:hover {

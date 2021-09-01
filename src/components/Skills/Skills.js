@@ -8,6 +8,7 @@ import {
   faJsSquare,
   faReact,
 } from '@fortawesome/free-brands-svg-icons';
+//import { SiRedux } from 'react-icons/si';
 import H2 from '../../UI/H2/H2';
 
 const skillsArr = [
@@ -15,10 +16,12 @@ const skillsArr = [
   { name: 'css', icon: faCss3Alt },
   { name: 'javascript', icon: faJsSquare },
   { name: 'react', icon: faReact },
+  //{ name: 'redux' },
 ];
 
 const Skills = () => {
   const skillsList = skillsArr.map((skill) => {
+    console.log(skill.icon);
     return (
       <div className={classes.skill} key={skill.name}>
         <FontAwesomeIcon
@@ -26,6 +29,10 @@ const Skills = () => {
           icon={skill.icon}
           size='5x'
         />
+
+        {/* {!skill.icon.prefix && (
+          <img src='https://img.icons8.com/material-rounded/80/000000/redux.png' />
+        )} */}
         <p>{skill.name.toUpperCase()}</p>
       </div>
     );
