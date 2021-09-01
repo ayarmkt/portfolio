@@ -5,13 +5,18 @@
 }
 
 .skills {
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .skills-list-container {
-  background-color: var(--gray);
+  background-color: var();
   padding: 30px;
   border-radius: 10px;
+  /* margin: 2px; */
+  border: 2px solid black;
+  filter: drop-shadow(10px 10px 0 var(--yellow));
+  /* z-index: -100; */
+  /* box-shadow: inset 0px 0px 0px 2px black; */
 }
 
 .skills-list {
@@ -40,7 +45,7 @@
 }
 
 .skill {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,4 +74,8 @@
 
 .react:hover {
   color: #00d8ff;
+}
+
+.redux:hover {
+  color: #764abc;
 }

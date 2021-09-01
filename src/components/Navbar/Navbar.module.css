@@ -1,12 +1,12 @@
-:root {
+/* :root {
   --navy: #193980;
   --lightblue: #27ccd8;
   --gray: #645c5c;
-}
+} */
 
 nav {
-  border: 1px solid red;
-  padding: 0 200px;
+  /* border: 1px solid red; */
+  padding: 0 250px;
 
   height: 50px;
   max-width: 100%;
@@ -30,8 +30,9 @@ li a {
 }
 
 li a:hover {
-  background-color: var(--lightblue);
-  color: white;
+  /* background-color: var(--yellow); */
+  border-bottom: 3px solid var(--yellow);
+  color: var(--gray);
 }
 
 .hamburger-menu {
