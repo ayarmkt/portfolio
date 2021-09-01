@@ -9,7 +9,7 @@
   grid-template-columns: auto 1fr;
   grid-template-rows: minmax(1fr, 100px) 1fr;
   border: 1px solid red;
-  margin-top: 150px;
+  padding-top: 150px;
   height: auto;
 }
 

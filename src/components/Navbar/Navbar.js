@@ -1,4 +1,4 @@
-import styles from './Navbar.module.css';
+import classes from './Navbar.module.css';
 // import { useState } from 'react';
 
 const Navbar = () => {
@@ -11,12 +11,12 @@ const Navbar = () => {
   return (
     <nav>
       <div
-        className={styles['hamburger-menu']}
+        className={classes['hamburger-menu']}
         // onClick={hamburgerToggleHandler}
       >
-        <div className={styles.hamburger} />
-        <div className={styles.hamburger} />
-        <div className={styles.hamburger} />
+        <div className={classes.hamburger} />
+        <div className={classes.hamburger} />
+        <div className={classes.hamburger} />
       </div>
       <li>
         <a href='#about'>About</a>

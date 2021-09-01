@@ -1,12 +1,12 @@
-import styles from './About.module.css';
+import classes from './About.module.css';
 import ProfilePic from '../../assets/profile-pic.png';
-import Card from '../../UI/Card';
+import Card from '../../UI/Card/Card';
 
 const About = () => {
   return (
-    <Card className={styles.about} id='about'>
-      <h1 className={styles.title}>Hi, I'm Aya</h1>
-      <div className={styles.text}>
+    <Card className={classes.about} id='about'>
+      <h1 className={classes.title}>Hi, I'm Aya</h1>
+      <div className={classes.text}>
         <p>I am a front-end developer from Tokyo, Japan.</p>
         <p>
           I love to write clean code and I'm passionate about making
@@ -19,7 +19,7 @@ const About = () => {
 
         <p>Download My Resume!</p>
       </div>
-      <div className={styles['profile-pic']}>
+      <div className={classes['profile-pic']}>
         <img src={ProfilePic} alt='Profile' />
       </div>
     </Card>

@@ -1,6 +1,6 @@
-import styles from './Skills.module.css';
-import Card from '../../UI/Card';
-import ReactDOM from 'react-dom';
+import classes from './Skills.module.css';
+import Card from '../../UI/Card/Card';
+//import ReactDOM from 'react-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHtml5,
@@ -8,7 +8,7 @@ import {
   faJsSquare,
   faReact,
 } from '@fortawesome/free-brands-svg-icons';
-import H2 from '../../UI/H2';
+import H2 from '../../UI/H2/H2';
 
 const skillsArr = [
   { name: 'html', icon: faHtml5 },
@@ -20,9 +20,9 @@ const skillsArr = [
 const Skills = () => {
   const skillsList = skillsArr.map((skill) => {
     return (
-      <div className={styles.skill} key={skill.name}>
+      <div className={classes.skill} key={skill.name}>
         <FontAwesomeIcon
-          className={`${styles.icon} ${styles[`${skill.name}`]}`}
+          className={`${classes.icon} ${classes[`${skill.name}`]}`}
           icon={skill.icon}
           size='5x'
         />
@@ -32,10 +32,10 @@ const Skills = () => {
   });
 
   return (
-    <Card className={styles.skills} id='skills'>
+    <Card className={classes.skills} id='skills'>
       <H2>Skills</H2>
-      <div className={styles['skills-list-container']}>
-        <div className={styles['skills-list']}>{skillsList}</div>
+      <div className={classes['skills-list-container']}>
+        <div className={classes['skills-list']}>{skillsList}</div>
       </div>
     </Card>
   );
