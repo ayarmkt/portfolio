@@ -40,7 +40,7 @@
 .text {
   /* grid-column: 1; */
   grid-row: 2;
-  font-size: 22px;
+  font-size: var(--fontsize-subtitle);
   color: var(--gray);
   padding-right: 15px;
   /* border: 1px solid blue; */

@@ -55,6 +55,7 @@
 .skill p {
   /* color: var(--gray); */
   color: black;
+  font-size: var(--fontsize-p);
 }
 
 .icon:hover {

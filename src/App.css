@@ -6,6 +6,8 @@
   --gray: #645c5c;
   --yellow: #f9d249;
   --pink: #d614f0;
+  --fontsize-p: 18px;
+  --fontsize-subtitle: 22px;
 }
 
 * {
