@@ -23,7 +23,8 @@ li {
 
 li a {
   display: block;
-  color: var(--gray);
+  /* color: var(--gray); */
+  font-size: var(--fontsize-p);
   text-align: center;
   padding: 15px 25px;
   text-decoration: none;
@@ -32,7 +33,7 @@ li a {
 li a:hover {
   /* background-color: var(--yellow); */
   border-bottom: 5px solid var(--yellow);
-  color: var(--gray);
+  /* color: var(--gray); */
 }
 
 .hamburger-menu {
