@@ -3,3 +3,42 @@
   --lightblue: #27ccd8;
   --gray: #645c5c;
 } */
+/* 
+* {
+  outline: 1px solid red;
+} */
+
+.contact p {
+  font-size: var(--fontsize-p);
+}
+
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0 100px;
+}
+
+.info {
+  padding: 25px;
+  /* display: flex; */
+  /* display: grid;
+  grid-template-rows: 2fr 1fr;
+  align-items: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  grid-row: 1;
+  width: 60%;
+  height: 60%;
+  /* margin: 5px; */
+  /* margin: 0 auto; */
+}
+
+.name {
+  grid-row: 2;
+  font-size: var(--fontsize-p);
+}

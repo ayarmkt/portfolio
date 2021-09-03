@@ -5,7 +5,7 @@ import project3 from '../../assets/calculator.png';
 
 const projectArr = [
   {
-    title: 'PROJECT TITLE1',
+    title: 'BUG TRACKER',
     techName: ['React', 'Redux', 'Firebase'],
     src: 'https://blog.tubikstudio.com/wp-content/uploads/2021/04/1_tubik_Uplyfe_starting-300x180.jpg',
     alt: 'bug tracker app',
@@ -13,7 +13,7 @@ const projectArr = [
       'A CRUD bug tracker app. The login is managed with React Context, and the app data is managed with Redux. Firebase is used for data storage.',
   },
   {
-    title: 'PROJECT TITLE2',
+    title: 'WEATHER APP',
     techName: ['React', 'OpenWeatherMap API'],
     src: 'https://blog.tubikstudio.com/wp-content/uploads/2021/04/1_tubik_Uplyfe_starting-300x180.jpg',
     alt: 'weather app',
@@ -33,7 +33,9 @@ const projectArr = [
 const Projects = () => {
   const projectList = projectArr.map((project) => {
     const tech = project.techName.map((techName) => (
-      <p className={classes.techItem}>{techName}</p>
+      <p className={classes.techItem} key={techName}>
+        {techName}
+      </p>
     ));
 
     return (
