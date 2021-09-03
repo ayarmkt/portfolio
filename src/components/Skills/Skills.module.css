@@ -4,6 +4,10 @@
   --gray: #645c5c;
 }
 
+/* * {
+  outline: 1px solid red;
+} */
+
 .skills {
   /* border: 1px solid red; */
 }
@@ -22,7 +26,7 @@
 .skills-list {
   background-color: white;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   grid-auto-rows: 1fr;
 }
 
@@ -54,8 +58,15 @@
 
 .skill p {
   /* color: var(--gray); */
-  color: black;
+  /* color: black; */
   font-size: var(--fontsize-p);
+  padding: 8px;
+}
+
+/* ICON */
+.icon {
+  width: 40%;
+  height: 40%;
 }
 
 .icon:hover {
@@ -63,21 +74,29 @@
 }
 
 .html:hover {
-  color: #e34f26;
+  fill: #e34f26;
 }
 
 .css:hover {
-  color: #264de4;
+  fill: #264de4;
 }
 
 .javascript:hover {
-  color: #f7df1e;
+  fill: #f7df1e;
 }
 
 .react:hover {
-  color: #00d8ff;
+  fill: #00d8ff;
 }
 
 .redux:hover {
-  color: #764abc;
+  fill: #764abc;
+}
+
+.firebase:hover {
+  fill: #ffcb2d;
+}
+
+.figma:hover {
+  fill: #ff7263;
 }

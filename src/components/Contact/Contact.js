@@ -8,31 +8,35 @@ const Contact = () => {
   const contactInfo = [
     {
       name: 'GitHub',
-      link: '',
+      link: 'https://github.com/ayarmkt',
       icon() {
-        return <FaGithub className={classes.icon} />;
+        return <FaGithub className={`${classes.icon} ${classes.github}`} />;
       },
     },
     {
       name: 'LinkedIn',
-      link: '',
+      link: 'https://www.linkedin.com/in/aya-t/',
       icon() {
-        return <FaLinkedin className={classes.icon} />;
+        return <FaLinkedin className={`${classes.icon} ${classes.linkedin}`} />;
       },
     },
     {
       name: 'Twitter',
-      link: '',
+      link: 'https://twitter.com/ayarmkt_',
       icon() {
-        return <FaTwitterSquare className={classes.icon} />;
+        return (
+          <FaTwitterSquare className={`${classes.icon} ${classes.twitter}`} />
+        );
       },
     },
   ];
 
   const contact = contactInfo.map((info) => (
     <div className={classes.info} key={info.name}>
-      {info.icon()}
-      <p className={classes.name}>{info.name}</p>
+      <a className={classes.link} href={info.link} target='_blank'>
+        {info.icon()}
+        <p className={classes.name}>{info.name}</p>
+      </a>
       {/* <a href={info.link} /> */}
     </div>
   ));
