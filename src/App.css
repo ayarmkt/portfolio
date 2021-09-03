@@ -5,6 +5,7 @@
   --lightblue: #27ccd8;
   --gray: #645c5c;
   --yellow: #f9d249;
+  --pink: #d614f0;
 }
 
 * {
@@ -12,6 +13,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  color: var(--gray);
   /* outline: 1px solid red; */
 }
 

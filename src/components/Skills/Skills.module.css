@@ -53,7 +53,8 @@
 }
 
 .skill p {
-  color: var(--gray);
+  /* color: var(--gray); */
+  color: black;
 }
 
 .icon:hover {

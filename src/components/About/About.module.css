@@ -67,6 +67,8 @@ br {
 .profile-pic img {
   width: 300px;
   filter: drop-shadow(20px 20px 0 var(--yellow));
+  z-index: 50;
+  /* filter: drop-shadow(20px 20px 0 var(--pink)); */
   /* border: 1px solid blue; */
 }
 
