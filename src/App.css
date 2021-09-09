@@ -24,3 +24,15 @@ header {
   top: 0;
   background-color: white;
 }
+
+.to-top-icon {
+  color: black;
+  position: fixed;
+  top: 750px;
+  left: 1300px;
+  /* visibility: hidden; */
+}
+
+/* .to-top-icon.visible {
+  visibility: visible;
+} */
