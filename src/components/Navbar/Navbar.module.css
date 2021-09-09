@@ -12,6 +12,9 @@ nav {
   max-width: 100%;
   display: flex;
   justify-content: flex-end;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 
 li {
@@ -21,7 +24,7 @@ li {
   /* display: none; */
 }
 
-li a {
+.link {
   display: block;
   /* color: var(--gray); */
   font-size: var(--fontsize-p);
@@ -30,13 +33,17 @@ li a {
   text-decoration: none;
 }
 
-li a:hover {
+.link.active {
+  border-bottom: 5px solid var(--yellow);
+}
+
+.link:hover {
   /* background-color: var(--yellow); */
   border-bottom: 5px solid var(--yellow);
   /* color: var(--gray); */
 }
 
-.hamburger-menu {
+/* .hamburger-menu {
   margin: auto 0;
 }
 
@@ -46,7 +53,7 @@ li a:hover {
   margin: 6px 0;
   background-color: var(--gray);
   display: none;
-}
+} */
 
 /* MEDIA QUERIES */
 @media (max-width: 1224px) {
