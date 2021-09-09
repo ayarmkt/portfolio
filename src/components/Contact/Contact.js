@@ -2,7 +2,7 @@ import classes from './Contact.module.css';
 import Card from '../../UI/Card/Card';
 import H2 from '../../UI/H2/H2';
 
-import { FaLinkedin, FaTwitterSquare, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaTwitterSquare, FaGithub, FaBlog } from 'react-icons/fa';
 
 const Contact = () => {
   const contactInfo = [
@@ -27,6 +27,13 @@ const Contact = () => {
         return (
           <FaTwitterSquare className={`${classes.icon} ${classes.twitter}`} />
         );
+      },
+    },
+    {
+      name: 'Blog',
+      link: 'https://ayatakamura.hashnode.dev/',
+      icon() {
+        return <FaBlog className={`${classes.icon} ${classes.blog}`} />;
       },
     },
   ];

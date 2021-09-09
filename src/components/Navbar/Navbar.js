@@ -1,5 +1,9 @@
 import classes from './Navbar.module.css';
 // import { useState } from 'react';
+//import { Link } from 'react-router-dom';
+//import { NavLink } from 'react-router-dom';
+//import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link as LinkScroll } from 'react-scroll';
 
 const Navbar = () => {
   // const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
@@ -10,26 +14,66 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div
+      {/* <div
         className={classes['hamburger-menu']}
         // onClick={hamburgerToggleHandler}
       >
         <div className={classes.hamburger} />
         <div className={classes.hamburger} />
         <div className={classes.hamburger} />
-      </div>
+      </div> */}
       <li>
-        <a href='#about'>About</a>
+        <LinkScroll
+          className={classes.link}
+          activeClass={classes.active}
+          to='about'
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={100}
+        >
+          About
+        </LinkScroll>
       </li>
       <li>
-        <a href='#skills'>Skills</a>
+        <LinkScroll
+          className={classes.link}
+          activeClass={classes.active}
+          to='skills'
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={100}
+        >
+          Skills
+        </LinkScroll>
       </li>
       <li>
-        <a href='#projects'>Projects</a>
+        <LinkScroll
+          className={classes.link}
+          activeClass={classes.active}
+          to='projects'
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={100}
+        >
+          Projects
+        </LinkScroll>
       </li>
 
       <li>
-        <a href='#contact'>Contact</a>
+        <LinkScroll
+          className={classes.link}
+          activeClass={classes.active}
+          to='contact'
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={100}
+        >
+          Contact
+        </LinkScroll>
       </li>
     </nav>
   );
