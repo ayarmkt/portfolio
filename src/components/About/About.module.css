@@ -12,6 +12,10 @@
   height: auto;
 }
 
+.about.sticky {
+  padding-top: 250px;
+}
+
 .text-content {
   grid-column: 1;
   display: grid;

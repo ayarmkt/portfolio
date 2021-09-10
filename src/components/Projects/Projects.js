@@ -43,12 +43,12 @@ const Projects = () => {
     const bottomPos = ref.current.offsetTop + ref.current.offsetHeight;
 
     if (
-      topPos < window.scrollY + window.innerHeight &&
+      topPos + 250 < window.scrollY + window.innerHeight &&
       bottomPos > window.scrollY
     ) {
       setRotate(true);
     } else {
-      console.log('not animate bottom');
+      //console.log('not animate bottom');
       setRotate(false);
     }
   };
