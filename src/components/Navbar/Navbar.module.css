@@ -35,11 +35,21 @@ li {
 
 .link.active {
   border-bottom: 5px solid var(--yellow);
+  position: relative;
+
+  /* box-shadow: inset 0px 5px 0px 2px var(--yellow); */
 }
+
+/* .link.active:before {
+  position: absolute;
+  top: 46px;
+  bottom: 2px;
+  border: 2px solid var(--yellow);
+} */
 
 .link:hover {
   /* background-color: var(--yellow); */
-  border-bottom: 5px solid var(--yellow);
+  border-bottom: 5px solid var(--lightblue);
   /* color: var(--gray); */
 }
 

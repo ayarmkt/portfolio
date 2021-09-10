@@ -1,4 +1,7 @@
 import classes from './Projects.module.css';
+import { useRef } from 'react';
+import { useState } from 'react';
+import { useLayoutEffect } from 'react';
 import Card from '../../UI/Card/Card';
 import H2 from '../../UI/H2/H2';
 import project3 from '../../assets/calculator.png';
@@ -31,6 +34,30 @@ const projectArr = [
 ];
 
 const Projects = () => {
+  const ref = useRef();
+  const [rotate, setRotate] = useState(false);
+
+  const onScroll = () => {
+    //const topPos = ref.current.getBoundingClientRect().top;
+    const topPos = ref.current.offsetTop;
+    const bottomPos = ref.current.offsetTop + ref.current.offsetHeight;
+
+    if (
+      topPos < window.scrollY + window.innerHeight &&
+      bottomPos > window.scrollY
+    ) {
+      setRotate(true);
+    } else {
+      console.log('not animate bottom');
+      setRotate(false);
+    }
+  };
+
+  useLayoutEffect(() => {
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   const projectList = projectArr.map((project) => {
     const tech = project.techName.map((techName) => (
       <p className={classes.techItem} key={techName}>
@@ -62,7 +89,14 @@ const Projects = () => {
   return (
     <Card className={classes.projects} id='projects'>
       <H2>Projects</H2>
-      <div className={classes['projects-list']}>{projectList}</div>
+      <div
+        className={`${classes['projects-list']} ${
+          rotate ? classes.rotate : ''
+        }`}
+        ref={ref}
+      >
+        {projectList}
+      </div>
     </Card>
   );
 };
