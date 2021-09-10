@@ -25,11 +25,11 @@ html {
   background-color: var(--lightgray);
 }
 
-header {
+/* header {
   position: sticky;
   top: 0;
   background-color: white;
-}
+} */
 
 /* .to-top-icon {
   color: black;

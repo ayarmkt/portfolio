@@ -93,7 +93,7 @@ const Skills = () => {
     //console.log(topPos);
 
     if (
-      topPos < window.scrollY + window.innerHeight &&
+      topPos + 250 < window.scrollY + window.innerHeight &&
       bottomPos > window.scrollY
     ) {
       setRotate(true);

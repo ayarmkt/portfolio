@@ -7,14 +7,22 @@
 nav {
   /* border: 1px solid red; */
   padding: 0 250px;
-  z-index: 100;
+  /* z-index: 100; */
   height: 50px;
   max-width: 100%;
   display: flex;
   justify-content: flex-end;
-  position: sticky;
+  /* position: sticky; */
+  /* top: 0; */
+  background-color: var(--lightgray);
+}
+
+nav.sticky {
+  position: fixed;
   top: 0;
+  width: 100%;
   background-color: white;
+  z-index: 100;
 }
 
 li {

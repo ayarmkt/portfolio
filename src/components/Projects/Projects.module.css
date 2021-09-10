@@ -9,27 +9,40 @@
 } */
 
 .projects-list {
-  transform: rotate(-10deg);
-  opacity: 0;
+  /* transform: rotate(-10deg); */
+  /* opacity: 0; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-auto-rows: 1fr;
+  animation: rotateBackwards 1s linear forwards;
 }
 
 .projects-list.rotate {
   /* border: 1px solid red; */
-  animation: rotate 1s linear forwards;
+  animation: rotateForwards 1s linear forwards;
 }
 
-@keyframes rotate {
+@keyframes rotateForwards {
   from {
     transform: rotate(-10deg);
-    opacity: 0.1;
+    opacity: 0;
   }
 
   to {
     transform: rotate(0deg);
     opacity: 1;
+  }
+}
+
+@keyframes rotateBackwards {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  to {
+    transform: rotate(-10deg);
+    opacity: 0;
   }
 }
 

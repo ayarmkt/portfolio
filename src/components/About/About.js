@@ -1,10 +1,17 @@
 import classes from './About.module.css';
 import ProfilePic from '../../assets/profile-pic.png';
 import Card from '../../UI/Card/Card';
+import { useContext } from 'react';
+import UIContext from '../../context/ui-context';
 
 const About = () => {
+  const uiCtx = useContext(UIContext);
+
   return (
-    <Card className={classes.about} id='about'>
+    <Card
+      className={`${classes.about} ${uiCtx.navIsSticky ? classes.sticky : ''}`}
+      id='about'
+    >
       <div className={classes['text-content']}>
         <h1 className={classes.title}>Hi, I'm Aya</h1>
         <div className={classes.text}>
