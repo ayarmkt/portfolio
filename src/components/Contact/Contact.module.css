@@ -8,8 +8,13 @@
   outline: 1px solid red;
 } */
 
+.contact {
+  margin-bottom: 100px;
+}
+
 .contact p {
   font-size: var(--fontsize-p);
+  text-align: center;
 }
 
 .contact-list {
@@ -17,6 +22,24 @@
   /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   padding: 0 100px;
+  opacity: 0;
+}
+
+.contact-list.fadein {
+  /* border: 1px solid red; */
+  animation: fadein 1s linear forwards;
+}
+
+@keyframes fadein {
+  from {
+    transform: translateY(20%);
+    opacity: 0.1;
+  }
+
+  to {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
 }
 
 .info {
@@ -25,17 +48,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center; */
+  /* text-decoration: none; */
 }
 
 .link {
   width: 100%;
   height: 100%;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .icon {

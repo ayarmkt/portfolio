@@ -1,5 +1,10 @@
 import classes from './Skills.module.css';
+import React from 'react';
+import { useState } from 'react';
+import { useRef } from 'react';
+import { useLayoutEffect } from 'react';
 import Card from '../../UI/Card/Card';
+
 //import ReactDOM from 'react-dom';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import {
@@ -8,6 +13,7 @@ import Card from '../../UI/Card/Card';
 //   faJsSquare,
 //   faReact,
 // } from '@fortawesome/free-brands-svg-icons';
+
 import {
   SiHtml5,
   SiCss3,
@@ -67,29 +73,71 @@ const skillsArr = [
 ];
 
 const Skills = () => {
+  //const ref = React.createRef();
+  const ref = useRef();
+  const [rotate, setRotate] = useState(false);
+  //const [fadein, setFadein] = useState(false);
+
+  //const topPos = ref.current.getBoundingClientRect().top;
+  //console.log(ref.current);
+
+  //const titleRef = useRef();
+  //console.log(titleRef.current);
+
+  //let rotate;
+
+  const onScroll = () => {
+    //const topPos = ref.current.getBoundingClientRect().top;
+    const topPos = ref.current.offsetTop;
+    const bottomPos = ref.current.offsetTop + ref.current.offsetHeight;
+    //console.log(topPos);
+
+    if (
+      topPos < window.scrollY + window.innerHeight &&
+      bottomPos > window.scrollY
+    ) {
+      setRotate(true);
+      console.log(window.scrollY);
+      //setFadein(true);
+    } else {
+      //console.log('not animate bottom');
+      setRotate(false);
+      //setFadein(false);
+    }
+  };
+
+  useLayoutEffect(() => {
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   const skillsList = skillsArr.map((skill) => {
     let icon = skill.icon();
     return (
       <div className={classes.skill} key={skill.name}>
-        {/* <FontAwesomeIcon
-          className={`${classes.icon} ${classes[`${skill.name}`]}`}
-          icon={skill.icon}
-          size='5x'
-        /> */}
-
-        {/* {!skill.icon.prefix && (
-          <img src='https://img.icons8.com/material-rounded/80/000000/redux.png' />
-        )} */}
         {icon}
         <p>{skill.name.toUpperCase()}</p>
       </div>
     );
   });
 
+  // const scrollToTop = () => {
+  //   scroll.scrollToTop({ duration: 100 });
+  // };
+
   return (
-    <Card className={classes.skills} id='skills'>
+    <Card
+      className={classes.skills}
+      id='skills'
+      //ref={ref}
+    >
       <H2>Skills</H2>
-      <div className={classes['skills-list-container']}>
+      {/* classes['skills-list-container'] */}
+      <div
+        className={`${classes['skills-list-container']}
+         ${rotate ? classes.rotate : ''}`}
+        ref={ref}
+      >
         <div className={classes['skills-list']}>{skillsList}</div>
       </div>
     </Card>
