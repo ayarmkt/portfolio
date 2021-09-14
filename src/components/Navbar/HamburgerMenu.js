@@ -1,7 +1,7 @@
 import classes from './HamburgerMenu.module.css';
 import { Link as LinkScroll } from 'react-scroll';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { useState } from 'react/cjs/react.development';
+import { useState } from 'react';
 import { useContext } from 'react';
 import UIContext from '../../context/ui-context';
 import { GrClose } from 'react-icons/gr';
