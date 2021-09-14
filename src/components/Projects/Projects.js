@@ -1,4 +1,5 @@
 import classes from './Projects.module.css';
+import React from 'react';
 import { useRef } from 'react';
 import { useState } from 'react';
 import { useLayoutEffect } from 'react';
@@ -35,6 +36,7 @@ const projectArr = [
 
 const Projects = () => {
   const ref = useRef();
+  //const ref = React.createRef();
   const [rotate, setRotate] = useState(false);
 
   const onScroll = () => {
@@ -75,12 +77,11 @@ const Projects = () => {
         <div className={classes['project-description']}>
           <h3 className={classes.title}>{project.title}</h3>
           <div className={classes.tech}>{tech}</div>
-
-          <p className={classes.description}>{project.description}</p>
           <div className={classes.link}>
             <a className={classes.live}>Live Demo</a>
             <a className={classes.github}>GitHub</a>
           </div>
+          <p className={classes.description}>{project.description}</p>
         </div>
       </div>
     );

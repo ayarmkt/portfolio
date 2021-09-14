@@ -9,7 +9,8 @@
 } */
 
 .contact {
-  margin-bottom: 100px;
+  /* margin-bottom: 100px; */
+  /* height: 1000px; */
 }
 
 .contact p {
@@ -21,8 +22,9 @@
   display: grid;
   /* grid-template-columns: repeat(4, 1fr); */
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  padding: 0 100px;
+  /* padding: 0 100px; */
   opacity: 0;
+  /* margin-bottom: 100px; */
 }
 
 .contact-list.fadein {
@@ -37,7 +39,6 @@
   }
 
   to {
-    transform: rotate(0deg);
     opacity: 1;
   }
 }
@@ -94,4 +95,97 @@
 .name {
   grid-row: 2;
   font-size: var(--fontsize-p);
+}
+
+/*  */
+/* MEDIA QUERIES */
+/*  */
+
+/* Tablets in landscape mode, older desktop monitors */
+@media only screen and (min-height: 1365px) and (max-width: 1365px) {
+  /* .contact {
+    background-color: lightskyblue;
+  } */
+}
+
+@media only screen and (max-height: 1364px) and (max-width: 1365px) {
+  /* .contact {
+    background-color: slateblue;
+  } */
+}
+
+/* Tablets in portrait mode, large display smartphones landscape mode */
+@media only screen and (min-height: 1023px) and (max-width: 1023px) {
+  /* .contact {
+    background-color: lightpink;
+  } */
+
+  .contact-list {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+}
+
+@media only screen and (max-height: 1022px) and (max-width: 1023px) {
+  /* .contact {
+    background-color: fuchsia;
+  } */
+}
+
+/* Smartphones in landscape mode */
+@media only screen and (min-height: 767px) and (max-width: 767px) {
+  /* .contact {
+    background-color: yellowgreen;
+  } */
+}
+
+@media only screen and (max-height: 766px) and (max-width: 767px) {
+  /* .contact {
+    background-color: lightyellow;
+  } */
+
+  .contact-list {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    /* opacity: 1;
+    transform: translateY(0%); */
+  }
+
+  /* .contact-list.fadein {
+    /* border: 1px solid red; */
+  /* animation: fadein 0.5s linear forwards; 
+    animation: none;
+  } */
+}
+
+/* Smartphones in portrait mode */
+@media only screen and (max-width: 420px) {
+  /* .contact {
+    background-color: lightseagreen;
+  } */
+
+  .contact-list {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+
+  .contact-list.fadein {
+    /* border: 1px solid red; */
+    animation: fadein 0.5s linear forwards;
+  }
+
+  /* .contact-list.fadein {
+    /* border: 1px solid red; */
+  /* animation: fadein 0.5s linear forwards; 
+    animation: none;
+  }
+
+  .contact-list {
+    display: grid;
+    /* grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+     padding: 0 100px; 
+    /* opacity: 0; 
+    /* transform: rotate(0deg); 
+    opacity: 1;
+    transform: translateY(0%);
+    /* margin-bottom: 100px; 
+  } */
 }

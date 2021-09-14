@@ -39,7 +39,9 @@ const Navbar = () => {
   // };
 
   return (
-    <nav className={uiCtx.navIsSticky ? classes.sticky : ''}>
+    <nav
+      className={`${classes.nav} ${uiCtx.navIsSticky ? classes.sticky : ''}`}
+    >
       {/* <div
         className={classes['hamburger-menu']}
         // onClick={hamburgerToggleHandler}
@@ -48,59 +50,60 @@ const Navbar = () => {
         <div className={classes.hamburger} />
         <div className={classes.hamburger} />
       </div> */}
-      <li>
-        <LinkScroll
-          className={classes.link}
-          activeClass={classes.active}
-          to='about'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={100}
-        >
-          About
-        </LinkScroll>
-      </li>
-      <li>
-        <LinkScroll
-          className={classes.link}
-          activeClass={classes.active}
-          to='skills'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={100}
-        >
-          Skills
-        </LinkScroll>
-      </li>
-      <li>
-        <LinkScroll
-          className={classes.link}
-          activeClass={classes.active}
-          to='projects'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={100}
-        >
-          Projects
-        </LinkScroll>
-      </li>
-
-      <li>
-        <LinkScroll
-          className={classes.link}
-          activeClass={classes.active}
-          to='contact'
-          spy={true}
-          smooth={true}
-          offset={-70}
-          duration={100}
-        >
-          Contact
-        </LinkScroll>
-      </li>
+      <ul>
+        <li className={classes.linkItem}>
+          <LinkScroll
+            className={classes.link}
+            activeClass={classes.active}
+            to='about'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={100}
+          >
+            About
+          </LinkScroll>
+        </li>
+        <li className={classes.linkItem}>
+          <LinkScroll
+            className={classes.link}
+            activeClass={classes.active}
+            to='skills'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={100}
+          >
+            Skills
+          </LinkScroll>
+        </li>
+        <li className={classes.linkItem}>
+          <LinkScroll
+            className={classes.link}
+            activeClass={classes.active}
+            to='projects'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={100}
+          >
+            Projects
+          </LinkScroll>
+        </li>
+        <li className={classes.linkItem}>
+          <LinkScroll
+            className={classes.link}
+            activeClass={classes.active}
+            to='contact'
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={100}
+          >
+            Contact
+          </LinkScroll>
+        </li>
+      </ul>
     </nav>
   );
 };
