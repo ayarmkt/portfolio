@@ -5,6 +5,7 @@ import { useState } from 'react';
 //import classes from './App.css';
 import { useEffect } from 'react';
 import { useLayoutEffect } from 'react';
+import { useContext } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 
 import Navbar from './components/Navbar/Navbar';
@@ -13,9 +14,25 @@ import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
 import Contact from './components/Contact/Contact';
 import { AiOutlineToTop } from 'react-icons/ai';
+import useWindowDimensions from './hooks/useWindowDimensions';
+import HamburgerMenu from './components/Navbar/HamburgerMenu';
+import UIContext from './context/ui-context';
 
 function App() {
   const [showIcon, setShowIcon] = useState(false);
+  const { width: vw } = useWindowDimensions();
+  const uiCtx = useContext(UIContext);
+  //const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    if (vw <= 1023) {
+      uiCtx.setMobile();
+      console.log(vw);
+    } else {
+      uiCtx.setNotMobile();
+      console.log(vw);
+    }
+  }, [vw]);
 
   const onScroll = () => {
     //const topPos = ref.current.getBoundingClientRect().top;
@@ -59,7 +76,8 @@ function App() {
   return (
     <React.Fragment>
       <header>
-        <Navbar />
+        {!uiCtx.mobile && <Navbar />}
+        {uiCtx.mobile && <HamburgerMenu />}
       </header>
       <main>
         {/* <Route path='/about'> */}

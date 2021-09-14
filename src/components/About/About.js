@@ -12,25 +12,28 @@ const About = () => {
       className={`${classes.about} ${uiCtx.navIsSticky ? classes.sticky : ''}`}
       id='about'
     >
-      <div className={classes['text-content']}>
-        <h1 className={classes.title}>Hi, I'm Aya</h1>
-        <div className={classes.text}>
-          <p>I am a front-end developer from Tokyo, Japan.</p>
-          <p>
-            I love to write clean code and I'm passionate about making
-            user-friendly product.
-          </p>
-          <p>
-            Previously as a Marketer for a long-selling FMCG brand, I care so
-            much about consumer values and user experience.
-          </p>
-          <br />
-          <p>Download My Resume!</p>
-        </div>
+      {/* <div className={classes['text-content']}> */}
+      <h1 className={classes.title}>Hi, I'm Aya</h1>
+      <div className={classes.text}>
+        <p>I am a front-end developer from Tokyo, Japan.</p>
+        <p>
+          I love to write clean code and I'm passionate about making
+          user-friendly product.
+        </p>
+        <p>
+          Previously as a Marketer for a long-selling FMCG brand, I care so much
+          about consumer values and user experience.
+        </p>
+        <br />
+        <p>Download My Resume!</p>
       </div>
       <div className={classes['profile-pic']}>
         <img src={ProfilePic} alt='Profile' />
       </div>
+      {/* </div> */}
+      {/* <div className={classes['profile-pic']}>
+        <img src={ProfilePic} alt='Profile' />
+      </div> */}
     </Card>
   );
 };

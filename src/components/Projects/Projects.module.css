@@ -64,9 +64,12 @@
   /* border: 1px solid blue; */
   display: grid;
   grid-template-rows: 1fr 250px;
+  /* grid-template-rows: 300px 1fr; */
+  /* height: 100%; */
+
   /* display: grid;
   grid-template-rows: repeat(auto-fit, minmax(250px, 1fr)); */
-  /* height: 100%;
+  /* 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -83,10 +86,14 @@
 .project-img a {
   border-radius: 10px;
   /* border: 1px solid red; */
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  /* padding: 15px; */
 }
 
 .project-img a:hover {
-  display: inline-block;
+  /* display: inline-block; */
   overflow: hidden;
 }
 
@@ -94,14 +101,21 @@
   border-radius: 10px;
   height: 100%;
   width: 100%;
-
+  /* height: calc(300px - 15px - 15px);
+  width: calc(300px - 15px - 15px); */
+  /* visibility: hidden; */
   /* border: 1px solid yellow; */
 }
 
 .project-img img:hover {
+  /* height: inherit; */
+  /* width: 100%; */
   /* height: 100%;
   width: 100%; */
   transform: scale(1.1);
+  /* overflow: hidden; */
+  /* height: 100%;
+  width: 100%; */
   transition: all 0.3s ease;
   vertical-align: middle;
 }
@@ -113,7 +127,7 @@
   /* padding: 5px; */
   text-align: center;
   display: grid;
-  grid-template-rows: repeat(2, 1fr) 180px 1fr;
+  grid-template-rows: repeat(3, 1fr) auto;
   padding: 0 15px;
   /* height: auto; */
   /* border: 1px solid blue; */
@@ -136,38 +150,28 @@
   justify-content: center;
   align-items: center;
   /* border: 1px solid blue; */
-  padding: 5px;
+  padding: 3px;
 }
 
 .techItem {
   margin: 0 2px;
   height: 30px;
   line-height: 30px;
-  padding: 0 10px;
+  width: auto;
+  padding: 0 1px;
   background-color: var(--yellow);
   border-radius: 5px;
   font-size: var(--fontsize-p);
 }
 
-.description {
-  grid-row: 3;
-  padding: 6px 15px;
-  line-height: 1.5;
-  /* padding: 0 5px; */
-  /* padding: 5px; */
-  /* color: var(--gray); */
-  /* font-size: 18px; */
-  font-size: var(--fontsize-p);
-  /* border: 1px solid blue; */
-}
-
 .link {
-  grid-row: 4;
+  grid-row: 3;
   padding: 5px 0 6px 0;
   font-weight: 700;
   /* border: 1px solid blue; */
   display: flex;
   justify-content: center;
+
   /*align-content: flex-end; */
   /* align-items: center;
   /* margin: 0 auto;
@@ -204,4 +208,179 @@
 .github:hover {
   background-color: var(--yellow);
   color: black;
+}
+
+.description {
+  grid-row: 4;
+  padding: 6px 15px;
+  line-height: 1.5;
+  /* padding: 0 5px; */
+  /* padding: 5px; */
+  /* color: var(--gray); */
+  /* font-size: 18px; */
+  font-size: var(--fontsize-p);
+  /* border: 1px solid blue; */
+}
+
+/*  */
+/* MEDIA QUERIES */
+/*  */
+
+/* Tablets in landscape mode, older desktop monitors */
+@media only screen and (min-height: 1365px) and (max-width: 1365px) {
+  /* .projects {
+    background-color: lightskyblue;
+  } */
+
+  .project {
+    grid-template-rows: 1fr 450px;
+    height: auto;
+  }
+
+  .project-description {
+    grid-template-rows: repeat(3, 1fr) 300px;
+  }
+
+  /* .description {
+    height: 100%;
+  } */
+}
+
+@media only screen and (max-height: 1364px) and (max-width: 1365px) {
+  /* .projects {
+    background-color: slateblue;
+  } */
+
+  .project-description {
+    grid-template-rows: repeat(3, 1fr) 200px;
+  }
+
+  .techItem {
+    margin: 0 2px;
+    font-size: 16px;
+  }
+
+  .link a {
+    font-size: 16px;
+  }
+}
+
+/* Tablets in portrait mode, large display smartphones landscape mode */
+@media only screen and (min-height: 1023px) and (max-width: 1023px) {
+  /* .projects {
+    background-color: lightpink;
+  } */
+
+  .project {
+    grid-template-rows: 1fr 360px;
+  }
+
+  /* .description {
+    height: 100%;
+  } */
+}
+
+@media only screen and (max-height: 1022px) and (max-width: 1023px) {
+  /* .projects {
+    background-color: fuchsia;
+  } */
+
+  .projects-list {
+    animation: rotateBackwards 0.5s linear forwards;
+  }
+
+  .projects-list.rotate {
+    animation: rotateForwards 0.5s linear forwards;
+  }
+
+  .project-description {
+    grid-template-rows: repeat(3, 1fr) 250px;
+  }
+
+  .techItem {
+    margin: 0 2px;
+    font-size: 15px;
+  }
+
+  .description {
+    height: auto;
+  }
+}
+
+/* Smartphones in landscape mode */
+@media only screen and (min-height: 767px) and (max-width: 767px) {
+  /* .projects {
+    background-color: yellowgreen;
+  } */
+}
+
+@media only screen and (max-height: 766px) and (max-width: 767px) {
+  /* .projects {
+    background-color: lightyellow;
+  } */
+
+  .projects-list {
+    animation: rotateBackwards 0.5s linear forwards;
+  }
+
+  .projects-list.rotate {
+    animation: rotateForwards 0.5s linear forwards;
+  }
+
+  .project {
+    grid-template-rows: 1fr 300px;
+  }
+
+  .project-description {
+    grid-template-rows: repeat(3, 1fr) 200px;
+  }
+
+  .techItem {
+    font-size: var(--fontsize-p);
+  }
+
+  .link a {
+    font-size: var(--fontsize-p);
+  }
+}
+
+/* Smartphones in portrait mode */
+@media only screen and (max-width: 420px) {
+  .projects {
+    /* background-color: lightseagreen; */
+    /* height: 100%; */
+  }
+
+  /* .project {
+    height: auto;
+  } */
+
+  .projects-list {
+    animation: rotateBackwards 0.5s linear forwards;
+  }
+
+  .projects-list.rotate {
+    animation: rotateForwards 0.5s linear forwards;
+  }
+
+  .project {
+    grid-template-rows: 1fr auto;
+  }
+
+  .project-description {
+    grid-template-rows: repeat(3, 1fr) auto;
+  }
+
+  .techItem {
+    margin: 0 2px;
+    font-size: var(--fontsize-p);
+  }
+
+  .link a {
+    font-size: var(--fontsize-p);
+  }
+
+  .description {
+    height: 100%;
+  }
 }
