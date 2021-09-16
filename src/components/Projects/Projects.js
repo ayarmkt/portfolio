@@ -17,6 +17,8 @@ const projectArr = [
     alt: 'bug tracker app',
     description:
       'A CRUD bug tracker app. The login is managed with React Context, and the app data is managed with Redux. Firebase is used for data storage.',
+    livedemo: '',
+    github: '',
   },
   {
     title: 'WEATHER APP',
@@ -24,7 +26,9 @@ const projectArr = [
     src: project2,
     alt: 'weather app',
     description:
-      'A weather app with a minimalist design. You can search for the current weather conditions around the world. The background changes according to the weather.',
+      'A weather app with a minimalist design that shows the current weather around the world. The background and icons change depending on the weather (covers 15 types of weather conditions).',
+    livedemo: 'https://ayatakamura-react-weather-app.netlify.app/',
+    github: 'https://github.com/ayarmkt/react-weather-app',
   },
   {
     title: 'CALCULATOR',
@@ -32,7 +36,9 @@ const projectArr = [
     src: project3,
     alt: 'calculator',
     description:
-      'A calculator made with JavaScript. It shows not only nthe result but also the process of calculation. It also supports +/- and % calculation.',
+      'A calculator made with JavaScript. It shows not only the result but also the process of calculation. It also supports +/- and % calculation.',
+    livedemo: '',
+    github: '',
   },
 ];
 
@@ -72,7 +78,7 @@ const Projects = () => {
     return (
       <div className={classes.project} key={project.title}>
         <div className={classes['project-img']}>
-          <a href=''>
+          <a href={project.livedemo} target='_blank'>
             <img src={project.src} alt={project.alt} />
           </a>
         </div>
@@ -80,8 +86,12 @@ const Projects = () => {
           <h3 className={classes.title}>{project.title}</h3>
           <p className={classes.tech}>{project.techName}</p>
           <div className={classes.link}>
-            <a className={classes.live}>Live Demo</a>
-            <a className={classes.github}>GitHub</a>
+            <a className={classes.live} href={project.livedemo} target='_blank'>
+              Live Demo
+            </a>
+            <a className={classes.github} href={project.github} target='_blank'>
+              GitHub
+            </a>
           </div>
           <p className={classes.description}>{project.description}</p>
         </div>
