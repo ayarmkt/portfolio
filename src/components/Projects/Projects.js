@@ -11,7 +11,8 @@ import project3 from '../../assets/calculator.png';
 const projectArr = [
   {
     title: 'BUG TRACKER',
-    techName: ['React', 'Redux', 'Firebase'],
+    // techName: ['React', 'Redux', 'Firebase'],
+    techName: 'React (React Context) | Redux | Firebase',
     src: 'https://blog.tubikstudio.com/wp-content/uploads/2021/04/1_tubik_Uplyfe_starting-300x180.jpg',
     alt: 'bug tracker app',
     description:
@@ -19,7 +20,7 @@ const projectArr = [
   },
   {
     title: 'WEATHER APP',
-    techName: ['React', 'OpenWeatherMap API'],
+    techName: 'React (React Context) | OpenWeatherMap API',
     src: project2,
     alt: 'weather app',
     description:
@@ -27,7 +28,7 @@ const projectArr = [
   },
   {
     title: 'CALCULATOR',
-    techName: ['HTML', 'CSS', 'JavaScript'],
+    techName: 'HTML | CSS | JavaScript',
     src: project3,
     alt: 'calculator',
     description:
@@ -62,11 +63,11 @@ const Projects = () => {
   }, []);
 
   const projectList = projectArr.map((project) => {
-    const tech = project.techName.map((techName) => (
-      <p className={classes.techItem} key={techName}>
-        {techName}
-      </p>
-    ));
+    // const tech = project.techName.map((techName) => (
+    //   <p className={classes.techItem} key={techName}>
+    //     {techName}
+    //   </p>
+    // ));
 
     return (
       <div className={classes.project} key={project.title}>
@@ -77,7 +78,7 @@ const Projects = () => {
         </div>
         <div className={classes['project-description']}>
           <h3 className={classes.title}>{project.title}</h3>
-          <div className={classes.tech}>{tech}</div>
+          <p className={classes.tech}>{project.techName}</p>
           <div className={classes.link}>
             <a className={classes.live}>Live Demo</a>
             <a className={classes.github}>GitHub</a>
