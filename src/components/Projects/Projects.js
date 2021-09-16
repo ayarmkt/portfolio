@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useLayoutEffect } from 'react';
 import Card from '../../UI/Card/Card';
 import H2 from '../../UI/H2/H2';
+import project2 from '../../assets/weather-app.png';
 import project3 from '../../assets/calculator.png';
 
 const projectArr = [
@@ -19,7 +20,7 @@ const projectArr = [
   {
     title: 'WEATHER APP',
     techName: ['React', 'OpenWeatherMap API'],
-    src: 'https://blog.tubikstudio.com/wp-content/uploads/2021/04/1_tubik_Uplyfe_starting-300x180.jpg',
+    src: project2,
     alt: 'weather app',
     description:
       'A weather app with a minimalist design. You can search for the current weather conditions around the world. The background changes according to the weather.',
@@ -30,7 +31,7 @@ const projectArr = [
     src: project3,
     alt: 'calculator',
     description:
-      'A calculator made with JavaScript. It shows not only the result but also the process of calculation. It also supports +/- and % calculation.',
+      'A calculator made with JavaScript. It shows not only nthe result but also the process of calculation. It also supports +/- and % calculation.',
   },
 ];
 
