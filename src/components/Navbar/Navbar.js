@@ -7,6 +7,8 @@ import UIContext from '../../context/ui-context';
 //import { NavLink } from 'react-router-dom';
 //import { Link, animateScroll as scroll } from 'react-scroll';
 import { Link as LinkScroll } from 'react-scroll';
+import icon from '../../assets/icon.png';
+import { animateScroll as scroll } from 'react-scroll';
 
 const Navbar = () => {
   //const [sticky, setsticky] = useState(false);
@@ -38,10 +40,17 @@ const Navbar = () => {
   //   hamburgerIsOpen ? setHamburgerIsOpen(false) : setHamburgerIsOpen(true);
   // };
 
+  const scrollToTop = () => {
+    scroll.scrollToTop({ duration: 100 });
+  };
+
   return (
     <nav
       className={`${classes.nav} ${uiCtx.navIsSticky ? classes.sticky : ''}`}
     >
+      <div className={classes.icon}>
+        <img src={icon} alt='home' onClick={scrollToTop} />
+      </div>
       {/* <div
         className={classes['hamburger-menu']}
         // onClick={hamburgerToggleHandler}
@@ -50,7 +59,7 @@ const Navbar = () => {
         <div className={classes.hamburger} />
         <div className={classes.hamburger} />
       </div> */}
-      <ul>
+      <ul className={classes.linkList}>
         <li className={classes.linkItem}>
           <LinkScroll
             className={classes.link}

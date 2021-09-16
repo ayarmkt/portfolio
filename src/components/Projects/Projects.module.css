@@ -151,6 +151,8 @@
   align-items: center;
   /* border: 1px solid blue; */
   padding: 3px;
+  /* background-color: var(--yellow);
+  border-radius: 5px; */
 }
 
 .techItem {
@@ -159,7 +161,8 @@
   line-height: 30px;
   width: auto;
   padding: 0 1px;
-  background-color: var(--yellow);
+  /* background-color: var(--yellow); */
+  /* color: var(--royalblue); */
   border-radius: 5px;
   font-size: var(--fontsize-p);
 }
