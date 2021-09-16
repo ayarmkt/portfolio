@@ -36,9 +36,9 @@ const projectArr = [
     src: project3,
     alt: 'calculator',
     description:
-      'A calculator made with JavaScript. It shows not only the result but also the process of calculation. It also supports +/- and % calculation.',
-    livedemo: '',
-    github: '',
+      'A calculator made with Vanilla JavaScript. The calculator displays both the calculation process and the result. It also supports +/- and % calculation.',
+    livedemo: 'https://ayarmkt.github.io/JS-calculator/',
+    github: 'https://github.com/ayarmkt/JS-calculator',
   },
 ];
 
