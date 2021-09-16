@@ -23,7 +23,7 @@ export const UIContextProvider = (props) => {
   };
 
   const setNavIsStickyHandler = () => {
-    if (mobile) {
+    if (!mobile) {
       setNavIsSticky(true);
     } else {
       setNavIsSticky(false);
