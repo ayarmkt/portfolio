@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useLayoutEffect } from 'react';
 import Card from '../../UI/Card/Card';
 import H2 from '../../UI/H2/H2';
+import project1 from '../../assets/bug-tracker.png';
 import project2 from '../../assets/weather-app.png';
 import project3 from '../../assets/calculator.png';
 
@@ -12,17 +13,17 @@ const projectArr = [
   {
     title: 'BUG TRACKER',
     // techName: ['React', 'Redux', 'Firebase'],
-    techName: 'React (React Context) | Redux | Firebase',
-    src: 'https://blog.tubikstudio.com/wp-content/uploads/2021/04/1_tubik_Uplyfe_starting-300x180.jpg',
+    techName: 'React (incl. React Context) | Redux | CSS | Firebase',
+    src: project1,
     alt: 'bug tracker app',
     description:
-      'A CRUD bug tracker app. The login is managed with React Context, and the app data is managed with Redux. Firebase is used for data storage.',
-    livedemo: '',
-    github: '',
+      'A CRUD Bug Tracker App that can be used to manage bugs in the project you are working on. It has authentication features (using React Context) and bug data management features (using Redux).',
+    livedemo: 'https://bug-tracker-app-75bd0.firebaseapp.com',
+    github: 'https://github.com/ayarmkt/bug-tracker',
   },
   {
     title: 'WEATHER APP',
-    techName: 'React (React Context) | OpenWeatherMap API',
+    techName: 'React (incl. React Context) | CSS | OpenWeatherMap API',
     src: project2,
     alt: 'weather app',
     description:
