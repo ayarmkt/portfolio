@@ -16,7 +16,7 @@ const About = () => {
     >
       <h1 className={classes.title}>Hi, I'm Aya</h1>
       <div className={classes.text}>
-        <p>I am a front-end developer from Tokyo, Japan.</p>
+        <p>I am a Front-end Developer from Tokyo, Japan.</p>
         <p>I care about user experience and building user-friendly products.</p>
         <p>
           With 4 years of experience in Brand Marketing, I can contribute from
