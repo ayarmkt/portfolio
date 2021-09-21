@@ -1,18 +1,15 @@
 import classes from './HamburgerMenu.module.css';
+import { useState } from 'react';
+
 import { Link as LinkScroll } from 'react-scroll';
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { useState } from 'react';
-import { useContext } from 'react';
-import UIContext from '../../context/ui-context';
 import { GrClose } from 'react-icons/gr';
 
 const HamburgerMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  //const uiCtx = useContext(UIContext);
 
   const openMenuHandler = () => {
     setMenuOpen(true);
-    //console.log(menuOpen);
   };
 
   const closeMenuHandler = () => {

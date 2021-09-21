@@ -1,71 +1,28 @@
-/* :root {
-  --navy: #193980;
-  --lightblue: #27ccd8;
-  --gray: #645c5c;
-} */
-
 .h2 {
   font-size: 50px;
   font-weight: 800;
   margin-bottom: 25px;
-  /* background: linear-gradient(var(--navy), var(--lightblue)); */
   background: linear-gradient(var(--royalblue), var(--lightblue));
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -moz-text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
-  /* border: 1px solid blue; */
 }
 
 /*  */
 /* MEDIA QUERIES */
 /*  */
 
-/* Tablets in landscape mode, older desktop monitors */
-@media only screen and (min-height: 1365px) and (max-width: 1365px) {
-  /* .h2 {
-    background-color: lightskyblue;
-  } */
-}
-
-@media only screen and (max-height: 1364px) and (max-width: 1365px) {
-  /* .h2 {
-    background-color: slateblue;
-  } */
-}
-
-/* Tablets in portrait mode, large display smartphones landscape mode */
-@media only screen and (min-height: 1023px) and (max-width: 1023px) {
-  /* .h2 {
-    background-color: lightpink;
-  } */
-}
-
 @media only screen and (max-height: 1022px) and (max-width: 1023px) {
   .h2 {
-    /* background-color: fuchsia; */
     font-size: 35px;
   }
-}
-
-/* Smartphones in landscape mode */
-@media only screen and (min-height: 767px) and (max-width: 767px) {
-  /* .h2 {
-    background-color: yellowgreen;
-  } */
-}
-
-@media only screen and (max-height: 766px) and (max-width: 767px) {
-  /* .h2 {
-    background-color: lightyellow;
-  } */
 }
 
 /* Smartphones in portrait mode */
 @media only screen and (max-width: 420px) {
   .h2 {
-    /* background-color: lightseagreen; */
     font-size: 30px;
     padding-left: 10px;
   }

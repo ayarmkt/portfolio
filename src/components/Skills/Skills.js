@@ -1,19 +1,7 @@
 import classes from './Skills.module.css';
-import React from 'react';
-import { useState } from 'react';
-import { useRef } from 'react';
-import { useLayoutEffect } from 'react';
+import React, { useState, useRef, useLayoutEffect } from 'react';
+
 import Card from '../../UI/Card/Card';
-
-//import ReactDOM from 'react-dom';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {
-//   faHtml5,
-//   faCss3Alt,
-//   faJsSquare,
-//   faReact,
-// } from '@fortawesome/free-brands-svg-icons';
-
 import {
   SiHtml5,
   SiCss3,
@@ -73,36 +61,20 @@ const skillsArr = [
 ];
 
 const Skills = () => {
-  //const ref = React.createRef();
   const ref = useRef();
   const [rotate, setRotate] = useState(false);
-  //const [fadein, setFadein] = useState(false);
-
-  //const topPos = ref.current.getBoundingClientRect().top;
-  //console.log(ref.current);
-
-  //const titleRef = useRef();
-  //console.log(titleRef.current);
-
-  //let rotate;
 
   const onScroll = () => {
-    //const topPos = ref.current.getBoundingClientRect().top;
     const topPos = ref.current.offsetTop;
     const bottomPos = ref.current.offsetTop + ref.current.offsetHeight;
-    //console.log(topPos);
 
     if (
       topPos + 250 < window.scrollY + window.innerHeight &&
       bottomPos > window.scrollY
     ) {
       setRotate(true);
-      console.log(window.scrollY);
-      //setFadein(true);
     } else {
-      //console.log('not animate bottom');
       setRotate(false);
-      //setFadein(false);
     }
   };
 
@@ -121,18 +93,9 @@ const Skills = () => {
     );
   });
 
-  // const scrollToTop = () => {
-  //   scroll.scrollToTop({ duration: 100 });
-  // };
-
   return (
-    <Card
-      className={classes.skills}
-      id='skills'
-      //ref={ref}
-    >
+    <Card className={classes.skills} id='skills'>
       <H2>Skills</H2>
-      {/* classes['skills-list-container'] */}
       <div
         className={`${classes['skills-list-container']}
          ${rotate ? classes.rotate : ''}`}

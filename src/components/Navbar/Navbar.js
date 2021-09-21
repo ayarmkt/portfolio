@@ -1,32 +1,19 @@
 import classes from './Navbar.module.css';
-import { useState } from 'react';
-import { useLayoutEffect } from 'react';
-import { useContext } from 'react';
+import { useLayoutEffect, useContext } from 'react';
+
 import UIContext from '../../context/ui-context';
-//import { Link } from 'react-router-dom';
-//import { NavLink } from 'react-router-dom';
-//import { Link, animateScroll as scroll } from 'react-scroll';
 import { Link as LinkScroll } from 'react-scroll';
-import icon from '../../assets/icon.png';
 import { animateScroll as scroll } from 'react-scroll';
+import icon from '../../assets/icon.png';
 
 const Navbar = () => {
-  //const [sticky, setsticky] = useState(false);
   const uiCtx = useContext(UIContext);
 
   const onScroll = () => {
-    //const topPos = ref.current.getBoundingClientRect().top;
-    //const topPos = ref.current.offsetTop;
-    //const bottomPos = ref.current.offsetTop + ref.current.offsetHeight;
-
     if (1 < window.scrollY) {
       uiCtx.setNavIsSticky();
-      //setFadein(true);
-      //console.log('true');
     } else {
-      //console.log('false');
       uiCtx.setNavIsNotSticky();
-      //setFadein(false);
     }
   };
 
@@ -34,11 +21,6 @@ const Navbar = () => {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-  // const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false);
-
-  // hamburgerToggleHandler = () => {
-  //   hamburgerIsOpen ? setHamburgerIsOpen(false) : setHamburgerIsOpen(true);
-  // };
 
   const scrollToTop = () => {
     scroll.scrollToTop({ duration: 100 });
@@ -51,14 +33,6 @@ const Navbar = () => {
       <div className={classes.icon}>
         <img src={icon} alt='home' onClick={scrollToTop} />
       </div>
-      {/* <div
-        className={classes['hamburger-menu']}
-        // onClick={hamburgerToggleHandler}
-      >
-        <div className={classes.hamburger} />
-        <div className={classes.hamburger} />
-        <div className={classes.hamburger} />
-      </div> */}
       <ul className={classes.linkList}>
         <li className={classes.linkItem}>
           <LinkScroll

@@ -1,10 +1,8 @@
 import classes from './Contact.module.css';
+import { useRef, useState, useLayoutEffect } from 'react';
+
 import Card from '../../UI/Card/Card';
 import H2 from '../../UI/H2/H2';
-import { useRef } from 'react';
-import { useState } from 'react';
-import { useLayoutEffect } from 'react';
-
 import { FaLinkedin, FaTwitterSquare, FaGithub, FaBlog } from 'react-icons/fa';
 
 const contactInfo = [
@@ -45,7 +43,6 @@ const Contact = () => {
   const [fadeIn, setFadeIn] = useState(false);
 
   const onScroll = () => {
-    //const topPos = ref.current.getBoundingClientRect().top;
     const topPos = ref.current.offsetTop;
     const bottomPos = ref.current.offsetTop + ref.current.offsetHeight;
 
@@ -55,7 +52,6 @@ const Contact = () => {
     ) {
       setFadeIn(true);
     } else {
-      console.log('not animate bottom');
       setFadeIn(false);
     }
   };
@@ -71,7 +67,6 @@ const Contact = () => {
         {info.icon()}
         <p className={classes.name}>{info.name}</p>
       </a>
-      {/* <a href={info.link} /> */}
     </div>
   ));
 

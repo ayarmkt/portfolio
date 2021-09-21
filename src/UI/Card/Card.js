@@ -3,11 +3,7 @@ import React from 'react';
 
 const Card = (props) => {
   return (
-    <section
-      className={`${classes.card} ${props.className}`}
-      id={props.id}
-      //ref={ref}
-    >
+    <section className={`${classes.card} ${props.className}`} id={props.id}>
       {props.children}
     </section>
   );

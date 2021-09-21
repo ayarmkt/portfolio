@@ -1,8 +1,6 @@
 import classes from './Projects.module.css';
-import React from 'react';
-import { useRef } from 'react';
-import { useState } from 'react';
-import { useLayoutEffect } from 'react';
+import React, { useRef, useState, useLayoutEffect } from 'react';
+
 import Card from '../../UI/Card/Card';
 import H2 from '../../UI/H2/H2';
 import project1 from '../../assets/bug-tracker.png';
@@ -12,7 +10,6 @@ import project3 from '../../assets/calculator.png';
 const projectArr = [
   {
     title: 'BUG TRACKER',
-    // techName: ['React', 'Redux', 'Firebase'],
     techName: 'React (incl. React Context) | Redux | CSS | Firebase',
     src: project1,
     alt: 'bug tracker app',
@@ -45,11 +42,9 @@ const projectArr = [
 
 const Projects = () => {
   const ref = useRef();
-  //const ref = React.createRef();
   const [rotate, setRotate] = useState(false);
 
   const onScroll = () => {
-    //const topPos = ref.current.getBoundingClientRect().top;
     const topPos = ref.current.offsetTop;
     const bottomPos = ref.current.offsetTop + ref.current.offsetHeight;
 
@@ -59,7 +54,6 @@ const Projects = () => {
     ) {
       setRotate(true);
     } else {
-      //console.log('not animate bottom');
       setRotate(false);
     }
   };
@@ -70,12 +64,6 @@ const Projects = () => {
   }, []);
 
   const projectList = projectArr.map((project) => {
-    // const tech = project.techName.map((techName) => (
-    //   <p className={classes.techItem} key={techName}>
-    //     {techName}
-    //   </p>
-    // ));
-
     return (
       <div className={classes.project} key={project.title}>
         <div className={classes['project-img']}>

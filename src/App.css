@@ -16,44 +16,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-  /* color: var(--gray); */
   color: var(--gray);
-  /* outline: 1px solid red; */
 }
 
 html {
   background-color: var(--lightgray);
   overflow-x: hidden;
-  /* width: 100vw;
-  height: 100vh; */
 }
-
-/* header {
-  position: sticky;
-  top: 0;
-  background-color: white;
-} */
-
-/* .to-top-icon {
-  color: black;
-  position: fixed;
-  top: 750px;
-  left: 1300px;
-  /* visibility: hidden; 
-} */
-
-/* .to-top-icon.visible {
-  visibility: visible;
-} */
 
 /* TO TOP ICON */
 .to-top-icon {
-  /* color: black; */
-  /* position: fixed;
-  top: 750px;
-  left: 1300px; */
-  /* opacity: 0; */
-  /* visibility: hidden; */
   z-index: 200;
   animation: fadeout 1s linear 0s forwards;
 }
@@ -83,9 +55,7 @@ html {
     border: 2px solid var(--gray);
     border-radius: 50%;
     position: fixed;
-    /* top: 750px; */
     bottom: 50px;
-    /* left: 1300px; */
     right: calc(250px / 2);
   }
 }
@@ -99,9 +69,7 @@ html {
     border: 2px solid var(--gray);
     border-radius: 50%;
     position: fixed;
-    /* top: 750px; */
     bottom: 50px;
-    /* left: 1300px; */
     right: calc(250px / 2);
   }
 
@@ -118,10 +86,6 @@ html {
 
 /* Tablets in landscape mode, older desktop monitors */
 @media only screen and (min-height: 1365px) and (max-width: 1365px) {
-  /* .skills {
-    background-color: lightskyblue;
-  } */
-
   @keyframes fadein {
     from {
       transform: translateY(50%);
@@ -153,19 +117,13 @@ html {
       border: 2px solid var(--gray);
       border-radius: 50%;
       position: fixed;
-      /* top: 750px; */
       bottom: 30px;
-      /* left: 1300px; */
       right: 20px;
     }
   }
 }
 
 @media only screen and (max-height: 1364px) and (max-width: 1365px) {
-  /* .skills {
-    background-color: slateblue;
-  } */
-
   @keyframes fadein {
     from {
       transform: translateY(50%);
@@ -181,9 +139,7 @@ html {
       border: 2px solid var(--gray);
       border-radius: 50%;
       position: fixed;
-      /* top: 750px; */
       bottom: 50px;
-      /* left: 1300px; */
       right: calc(100px / 2);
     }
   }
@@ -197,9 +153,7 @@ html {
       border: 2px solid var(--gray);
       border-radius: 50%;
       position: fixed;
-      /* top: 750px; */
       bottom: 50px;
-      /* left: 1300px; */
       right: calc(100px / 2);
     }
 
@@ -213,10 +167,6 @@ html {
 
 /* Tablets in portrait mode, large display smartphones landscape mode */
 @media only screen and (min-height: 1023px) and (max-width: 1023px) {
-  /* .skills {
-    background-color: lightpink;
-  } */
-
   @keyframes fadein {
     from {
       transform: translateY(50%);
@@ -232,9 +182,7 @@ html {
       border: 2px solid var(--gray);
       border-radius: 50%;
       position: fixed;
-      /* top: 750px; */
       bottom: 30px;
-      /* left: 1300px; */
       right: 60px;
     }
   }
@@ -248,9 +196,7 @@ html {
       border: 2px solid var(--gray);
       border-radius: 50%;
       position: fixed;
-      /* top: 750px; */
       bottom: 30px;
-      /* left: 1300px; */
       right: 60px;
     }
 
@@ -263,10 +209,6 @@ html {
 }
 
 @media only screen and (max-height: 1022px) and (max-width: 1023px) {
-  /* .skills {
-    background-color: fuchsia;
-  } */
-
   .to-top-icon {
     background-color: var(--lightgray);
   }
@@ -274,10 +216,6 @@ html {
 
 /* Smartphones in landscape mode */
 @media only screen and (min-height: 767px) and (max-width: 767px) {
-  /* .skills {
-    background-color: yellowgreen;
-  } */
-
   @keyframes fadein {
     from {
       transform: translateY(50%);
@@ -293,9 +231,7 @@ html {
       border: 2px solid var(--gray);
       border-radius: 50%;
       position: fixed;
-      /* top: 750px; */
       bottom: 30px;
-      /* left: 1300px; */
       right: 30px;
     }
   }
@@ -309,9 +245,7 @@ html {
       border: 2px solid var(--gray);
       border-radius: 50%;
       position: fixed;
-      /* top: 750px; */
       bottom: 30px;
-      /* left: 1300px; */
       right: 30px;
     }
 
@@ -324,10 +258,6 @@ html {
 }
 
 @media only screen and (max-height: 766px) and (max-width: 767px) {
-  /* .skills {
-    background-color: lightyellow;
-  } */
-
   @keyframes fadein {
     from {
       transform: translateY(50%);
@@ -343,9 +273,7 @@ html {
       border: 2px solid var(--gray);
       border-radius: 50%;
       position: fixed;
-      /* top: 750px; */
       bottom: 50px;
-      /* left: 1300px; */
       right: 30px;
     }
   }
@@ -359,9 +287,7 @@ html {
       border: 2px solid var(--gray);
       border-radius: 50%;
       position: fixed;
-      /* top: 750px; */
       bottom: 50px;
-      /* left: 1300px; */
       right: 30px;
     }
 
@@ -375,10 +301,6 @@ html {
 
 /* Smartphones in portrait mode */
 @media only screen and (max-width: 420px) {
-  /* .skills {
-    background-color: lightseagreen;
-  } */
-
   @keyframes fadein {
     from {
       transform: translateY(50%);
@@ -394,9 +316,7 @@ html {
       border: 2px solid var(--gray);
       border-radius: 50%;
       position: fixed;
-      /* top: 750px; */
       bottom: 20px;
-      /* left: 1300px; */
       right: 20px;
     }
   }
@@ -410,9 +330,7 @@ html {
       border: 2px solid var(--gray);
       border-radius: 50%;
       position: fixed;
-      /* top: 750px; */
       bottom: 20px;
-      /* left: 1300px; */
       right: 20px;
     }
 
