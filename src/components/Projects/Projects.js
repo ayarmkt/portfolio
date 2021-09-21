@@ -17,7 +17,7 @@ const projectArr = [
     src: project1,
     alt: 'bug tracker app',
     description:
-      'A CRUD Bug Tracker App that can be used to manage bugs in the project you are working on. It has authentication features (using React Context) and bug data management features (using Redux).',
+      'A CRUD Bug Tracker App that can be used to manage and keep track of bugs in the project you are working on. It has authentication features (login, sign up, log out) and bug data management features (read bugs data, add new bugs, edit bugs, delete bugs).',
     livedemo: 'https://bug-tracker-app-75bd0.firebaseapp.com',
     github: 'https://github.com/ayarmkt/bug-tracker',
   },
@@ -27,7 +27,7 @@ const projectArr = [
     src: project2,
     alt: 'weather app',
     description:
-      'A weather app with a minimalist design that shows the current weather around the world. The background and icons change depending on the weather (covers 15 types of weather conditions).',
+      'A weather app with a minimalist design that retrieves weather data from the OpenWeatherMap API and displays the weather around the world.',
     livedemo: 'https://ayatakamura-react-weather-app.netlify.app/',
     github: 'https://github.com/ayarmkt/react-weather-app',
   },
@@ -37,7 +37,7 @@ const projectArr = [
     src: project3,
     alt: 'calculator',
     description:
-      'A calculator made with Vanilla JavaScript. The calculator displays both the calculation process and the result. It also supports +/- and % calculation.',
+      'A calculator made with JavaScript. The calculator displays both the calculation process and the result. It has a plus/minus button and a percentage button.',
     livedemo: 'https://ayarmkt.github.io/JS-calculator/',
     github: 'https://github.com/ayarmkt/JS-calculator',
   },
