@@ -145,6 +145,8 @@
   .skills-list-container {
     padding: 0px 10px;
     animation: none;
+    border: none;
+    filter: none;
   }
 
   .skills-list-container.rotate {

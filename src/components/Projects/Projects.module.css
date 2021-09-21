@@ -245,7 +245,8 @@
 @media only screen and (max-width: 420px) {
   .projects-list {
     animation: none;
-    grid-template-rows: repeat(3, auto);
+    grid-template-rows: repeat(auto-fit, minmax(250px, auto));
+    grid-auto-columns: 1fr;
   }
 
   .projects-list.rotate {
