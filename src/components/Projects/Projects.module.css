@@ -243,10 +243,6 @@
 
 /* Smartphones in portrait mode */
 @media only screen and (max-width: 420px) {
-  * {
-    outline: 1px solid red;
-  }
-
   .projects-list {
     animation: none;
   }
@@ -255,25 +251,29 @@
     animation: none;
   }
 
-  .project {
-    margin: 0 auto;
+  .projects-list {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
-    position: relative;
-    width: 100%;
   }
 
-  .project:before {
-    float: left;
-    padding-top: 100%;
+  .project {
+    margin: 0 auto;
+    height: auto;
+    grid-template-rows: 1fr auto;
   }
 
   .project-img {
-    float: left;
+    width: auto;
+    height: auto;
+  }
+
+  .project-img a {
+    width: auto;
+    height: auto;
   }
 
   .project-description {
-    grid-template-rows: 1fr 1.5fr 1fr auto;
+    grid-template-rows: 40px auto 40px auto;
   }
 
   .tech {

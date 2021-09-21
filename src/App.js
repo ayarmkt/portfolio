@@ -21,10 +21,8 @@ function App() {
   useEffect(() => {
     if (vw <= 1023) {
       uiCtx.setMobile();
-      console.log(vw);
     } else {
       uiCtx.setNotMobile();
-      console.log(vw);
     }
   }, [vw]);
 

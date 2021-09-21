@@ -87,6 +87,7 @@
 @media only screen and (max-width: 420px) {
   .contact-list {
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    opacity: 1;
   }
 
   .contact-list.fadein {

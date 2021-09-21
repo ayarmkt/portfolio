@@ -15,15 +15,15 @@ import H2 from '../../UI/H2/H2';
 
 const skillsArr = [
   {
-    name: 'html',
+    name: 'react',
     icon() {
-      return <SiHtml5 className={`${classes.icon} ${classes.html}`} />;
+      return <SiReact className={`${classes.icon} ${classes.react}`} />;
     },
   },
   {
-    name: 'css',
+    name: 'redux',
     icon() {
-      return <SiCss3 className={`${classes.icon} ${classes.css}`} />;
+      return <SiRedux className={`${classes.icon} ${classes.redux}`} />;
     },
   },
   {
@@ -35,15 +35,15 @@ const skillsArr = [
     },
   },
   {
-    name: 'react',
+    name: 'html',
     icon() {
-      return <SiReact className={`${classes.icon} ${classes.react}`} />;
+      return <SiHtml5 className={`${classes.icon} ${classes.html}`} />;
     },
   },
   {
-    name: 'redux',
+    name: 'css',
     icon() {
-      return <SiRedux className={`${classes.icon} ${classes.redux}`} />;
+      return <SiCss3 className={`${classes.icon} ${classes.css}`} />;
     },
   },
   {
