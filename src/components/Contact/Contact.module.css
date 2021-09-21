@@ -90,6 +90,6 @@
   }
 
   .contact-list.fadein {
-    animation: fadein 0.5s linear forwards;
+    animation: none;
   }
 }
