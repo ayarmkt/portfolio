@@ -12,6 +12,7 @@ import HamburgerMenu from './components/Navbar/HamburgerMenu';
 import useWindowDimensions from './hooks/useWindowDimensions';
 import UIContext from './context/ui-context';
 import { AiOutlineToTop } from 'react-icons/ai';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const uiCtx = useContext(UIContext);
@@ -60,6 +61,7 @@ function App() {
           onClick={scrollToTop}
         />
       </main>
+      <Footer />
     </React.Fragment>
   );
 }

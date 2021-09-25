@@ -29,6 +29,10 @@
   float: left;
 }
 
+.linkItem:hover {
+  cursor: pointer;
+}
+
 .link {
   display: block;
   font-size: var(--fontsize-p);
