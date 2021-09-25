@@ -1,5 +1,5 @@
 .footer {
-  margin: 20px 250px 20px 250px;
+  padding: 20px 250px 20px 250px;
   text-align: center;
 }
 
@@ -10,40 +10,40 @@
 /* Tablets in landscape mode, older desktop monitors */
 @media only screen and (max-width: 1365px) {
   .footer {
-    margin: 0 100px 0px 100px;
+    padding: 0 100px 0px 100px;
   }
 }
 
 /* Tablets in portrait mode, large display smartphones landscape mode */
 @media only screen and (min-height: 1023px) and (max-width: 1023px) {
   .footer {
-    margin: 0 60px 0px 60px;
+    padding: 0 60px 0px 60px;
   }
 }
 
 @media only screen and (max-height: 1022px) and (max-width: 1023px) {
   .footer {
-    margin: 0 20px 200px 20px;
+    padding: 0 20px 200px 20px;
   }
 }
 
 /* Smartphones in landscape mode */
 @media only screen and (min-height: 767px) and (max-width: 767px) {
   .footer {
-    margin: 0 10px 150px 10px;
+    padding: 0 10px 150px 10px;
     overflow-x: hidden;
   }
 }
 
 @media only screen and (max-height: 766px) and (max-width: 767px) {
   .footer {
-    margin: 0 30px 0px 30px;
+    padding: 0px 30px 10px 30px;
   }
 }
 
 /* Smartphones in portrait mode */
 @media only screen and (max-width: 420px) {
   .footer {
-    margin: 0;
+    padding: 10px 0;
   }
 }

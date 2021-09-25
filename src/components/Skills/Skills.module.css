@@ -112,13 +112,13 @@
 /* MEDIA QUERIES */
 /*  */
 
-@media only screen and (max-height: 1022px) and (max-width: 1023px) {
+@media only screen and (max-width: 1023px) {
   .skills-list-container {
-    animation: rotateBackwards 0.5s linear forwards;
+    animation: none;
   }
 
   .skills-list-container.rotate {
-    animation: rotateForwards 0.5s linear forwards;
+    animation: none;
   }
 }
 
@@ -128,15 +128,23 @@
     border: none;
     filter: none;
   }
+
+  .skills-list-container {
+    animation: none;
+  }
+
+  .skills-list-container.rotate {
+    animation: none;
+  }
 }
 
 @media only screen and (max-height: 766px) and (max-width: 767px) {
   .skills-list-container {
-    animation: rotateBackwards 0.5s linear forwards;
+    animation: none;
   }
 
   .skills-list-container.rotate {
-    animation: rotateForwards 0.5s linear forwards;
+    animation: none;
   }
 }
 
