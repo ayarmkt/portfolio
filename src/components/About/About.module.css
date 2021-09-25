@@ -2,12 +2,12 @@
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-rows: 1fr 1.5fr;
-  padding-top: 200px;
+  padding-top: 150px;
   height: auto;
 }
 
 .about.sticky {
-  padding-top: 250px;
+  padding-top: 210px;
 }
 
 .title {
@@ -54,10 +54,48 @@ br {
   z-index: 50;
 }
 
+.contact-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 225px;
+  height: 50px;
+  margin-top: 15px;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 60%;
+  height: 60%;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.github:hover {
+  fill: #6e5494;
+}
+
+.linkedin:hover {
+  fill: #0077b5;
+}
+
+.twitter:hover {
+  fill: #1da1f2;
+}
+
+.blog:hover {
+  fill: #2962ff;
+}
+
 /*  */
 /* MEDIA QUERIES */
 /*  */
-
 /* Tablets in landscape mode, older desktop monitors */
 @media only screen and (min-height: 1365px) and (max-width: 1365px) {
   .title {
@@ -133,6 +171,9 @@ br {
     grid-row: 3;
     padding: 0 10px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .profile-pic {

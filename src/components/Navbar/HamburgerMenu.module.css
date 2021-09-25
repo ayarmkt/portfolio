@@ -6,6 +6,10 @@
   z-index: 100;
 }
 
+.nav:hover {
+  cursor: pointer;
+}
+
 .links {
   display: none;
   background-color: var(--gray);
