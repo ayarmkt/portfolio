@@ -20,7 +20,7 @@ const projectArr = [
   },
   {
     title: 'WEATHER APP',
-    techName: 'React (incl. React Context) | CSS | OpenWeatherMap API',
+    techName: 'React (incl. React Context) | CSS | OpenWeatherMap',
     src: project2,
     alt: 'weather app',
     description:
@@ -73,6 +73,7 @@ const Projects = () => {
         </div>
         <div className={classes['project-description']}>
           <h3 className={classes.title}>{project.title}</h3>
+          <p className={classes.subtitle}>{'<Personal Project>'}</p>
           <p className={classes.tech}>{project.techName}</p>
           <div className={classes.link}>
             <a className={classes.live} href={project.livedemo} target='_blank'>
