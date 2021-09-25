@@ -7,7 +7,6 @@ import Navbar from './components/Navbar/Navbar';
 import About from './components/About/About';
 import Skills from './components/Skills/Skills';
 import Projects from './components/Projects/Projects';
-import Contact from './components/Contact/Contact';
 import HamburgerMenu from './components/Navbar/HamburgerMenu';
 import useWindowDimensions from './hooks/useWindowDimensions';
 import UIContext from './context/ui-context';
@@ -54,7 +53,6 @@ function App() {
         <About />
         <Skills />
         <Projects />
-        <Contact />
         <AiOutlineToTop
           className={`to-top-icon ${showIcon ? 'showIcon' : ''}`}
           size='50px'

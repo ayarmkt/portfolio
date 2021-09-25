@@ -58,19 +58,6 @@ const HamburgerMenu = () => {
             Projects
           </LinkScroll>
         </li>
-        <li className={classes.linkItem}>
-          <LinkScroll
-            className={classes.link}
-            activeClass={classes.active}
-            to='contact'
-            spy={true}
-            smooth={true}
-            offset={-70}
-            duration={100}
-          >
-            Contact
-          </LinkScroll>
-        </li>
       </ul>
       {!menuOpen && (
         <GiHamburgerMenu
