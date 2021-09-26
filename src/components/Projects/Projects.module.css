@@ -106,6 +106,7 @@
   font-size: var(--fontsize-p);
   line-height: 1.5;
   padding-top: 5px;
+  text-align: start;
 }
 
 .link {
@@ -168,51 +169,29 @@
 /* Tablets in landscape mode, older desktop monitors */
 @media only screen and (min-height: 1365px) and (max-width: 1365px) {
   .project {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    height: auto;
-    margin-bottom: 0px;
-  }
-
-  .project-img {
-    grid-column: 1;
-    grid-row: 1;
+    margin-bottom: 90px;
   }
 
   .project-description {
-    grid-column: 1;
-    grid-row: 2;
-    grid-template-rows: repeat(3, 1fr) auto;
-    padding: 15px 0;
+    padding-left: 15px;
+  }
+
+  .description {
+    padding: 15px 0px 35px 0px;
   }
 }
 
 @media only screen and (max-height: 1364px) and (max-width: 1365px) {
   .project {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    height: auto;
-    margin-bottom: 0px;
-  }
-
-  .project-img {
-    grid-column: 1;
-    grid-row: 1;
+    margin-bottom: 90px;
   }
 
   .project-description {
-    grid-column: 1;
-    grid-row: 2;
-    grid-template-rows: repeat(3, 1fr) auto;
-    padding: 15px 0;
+    padding-left: 15px;
   }
 
-  .tech {
-    font-size: 16px;
-  }
-
-  .link a {
-    font-size: 16px;
+  .description {
+    padding: 15px 0px 35px 0px;
   }
 }
 
@@ -225,6 +204,28 @@
   .projects-list.rotate {
     animation: none;
   }
+
+  .project {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .project-img {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .project-description {
+    grid-column: 1;
+    grid-row: 2;
+    grid-template-rows: repeat(3, 1fr) auto;
+  }
+
+  .description {
+    height: auto;
+  }
 }
 
 @media only screen and (max-height: 1022px) and (max-width: 1023px) {
@@ -234,6 +235,24 @@
 
   .projects-list.rotate {
     animation: none;
+  }
+
+  .project {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    height: auto;
+    margin-bottom: 40px;
+  }
+
+  .project-img {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .project-description {
+    grid-column: 1;
+    grid-row: 2;
+    grid-template-rows: repeat(3, 1fr) auto;
   }
 
   .description {
@@ -290,6 +309,7 @@
     margin: 0 auto;
     height: auto;
     grid-template-rows: 1fr auto;
+    margin-bottom: 30px;
   }
 
   .project-img {
