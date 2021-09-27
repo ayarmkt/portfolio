@@ -11,7 +11,7 @@ import {
   SiFirebase,
   SiFigma,
 } from 'react-icons/si';
-import H2 from '../../UI/H2/H2';
+import SectionTitle from '../../UI/SectionTitle/SectionTitle';
 
 const skillsArr = [
   {
@@ -95,7 +95,7 @@ const Skills = () => {
 
   return (
     <Card className={classes.skills} id='skills'>
-      <H2>Skills</H2>
+      <SectionTitle>Skills</SectionTitle>
       <div
         className={`${classes['skills-list-container']}
          ${rotate ? classes.rotate : ''}`}

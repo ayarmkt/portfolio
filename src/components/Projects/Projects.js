@@ -2,7 +2,7 @@ import classes from './Projects.module.css';
 import React, { useRef, useState, useLayoutEffect } from 'react';
 
 import Card from '../../UI/Card/Card';
-import H2 from '../../UI/H2/H2';
+import SectionTitle from '../../UI/SectionTitle/SectionTitle';
 import project1 from '../../assets/bug-tracker.png';
 import project2 from '../../assets/weather-app.png';
 import project3 from '../../assets/calculator.png';
@@ -91,7 +91,7 @@ const Projects = () => {
 
   return (
     <Card className={classes.projects} id='projects'>
-      <H2>Projects</H2>
+      <SectionTitle>Projects</SectionTitle>
       <div
         className={`${classes['projects-list']} ${
           rotate ? classes.rotate : ''
