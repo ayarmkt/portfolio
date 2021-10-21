@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import ProfilePic from '../../assets/profile-pic.png';
 import Card from '../../UI/Card/Card';
 import UIContext from '../../context/ui-context';
-import PDF from '../../assets/AYA_TAKAMURA.pdf';
+import PDF from '../../assets/CV_Aya Takamura.pdf';
 import { FaLinkedin, FaTwitterSquare, FaGithub, FaBlog } from 'react-icons/fa';
 
 const contactInfo = [
