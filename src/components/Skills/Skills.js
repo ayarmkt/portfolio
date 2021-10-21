@@ -10,6 +10,8 @@ import {
   SiRedux,
   SiFirebase,
   SiFigma,
+  SiTailwindcss,
+  SiNpm,
 } from 'react-icons/si';
 import SectionTitle from '../../UI/SectionTitle/SectionTitle';
 
@@ -47,6 +49,14 @@ const skillsArr = [
     },
   },
   {
+    name: 'tailwind css',
+    icon() {
+      return (
+        <SiTailwindcss className={`${classes.icon} ${classes.tailwindcss}`} />
+      );
+    },
+  },
+  {
     name: 'firebase',
     icon() {
       return <SiFirebase className={`${classes.icon} ${classes.firebase}`} />;
@@ -56,6 +66,12 @@ const skillsArr = [
     name: 'figma',
     icon() {
       return <SiFigma className={`${classes.icon} ${classes.figma}`} />;
+    },
+  },
+  {
+    name: 'npm',
+    icon() {
+      return <SiNpm className={`${classes.icon} ${classes.npm}`} />;
     },
   },
 ];

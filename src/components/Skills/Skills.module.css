@@ -88,6 +88,10 @@
   fill: #264de4;
 }
 
+.tailwindcss:hover {
+  fill: #06b6d4;
+}
+
 .javascript:hover {
   fill: #f7df1e;
 }
@@ -106,6 +110,10 @@
 
 .figma:hover {
   fill: #ff7263;
+}
+
+.npm:hover {
+  fill: #cb3837;
 }
 
 /*  */
