@@ -45,5 +45,6 @@
 @media only screen and (max-width: 420px) {
   .footer {
     padding: 10px 0;
+    font-size: 14px;
   }
 }

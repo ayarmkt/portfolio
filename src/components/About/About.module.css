@@ -219,11 +219,15 @@ br {
     width: 100%;
     margin: 0 auto;
     height: auto;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
   }
 
   .profile-pic img {
     width: 40%;
+  }
+
+  .text {
+    font-size: 18px;
   }
 }
 
@@ -244,7 +248,7 @@ br {
   .profile-pic {
     width: 60vw;
     margin: 0 auto;
-    margin-bottom: 35px;
+    margin-bottom: 60px;
   }
 
   .profile-pic img {
@@ -254,6 +258,6 @@ br {
   .text {
     width: 100%;
     padding: 0 20px;
-    font-size: var(--fontsize-p);
+    font-size: 16px;
   }
 }
