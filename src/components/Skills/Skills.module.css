@@ -37,7 +37,8 @@
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   grid-auto-rows: 1fr;
 }
 
@@ -68,6 +69,7 @@
 .skill p {
   font-size: var(--fontsize-p);
   padding: 8px;
+  text-align: center;
 }
 
 /* ICON */
@@ -171,5 +173,9 @@
 
   .skills-list {
     grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  }
+
+  .skill p {
+    font-size: 14px;
   }
 }
