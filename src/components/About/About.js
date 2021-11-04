@@ -61,14 +61,17 @@ const About = () => {
     >
       <h1 className={classes.title}>Hi, I'm Aya</h1>
       <div className={classes.text}>
-        <p>I am a Front-end Developer from Tokyo, Japan.</p>
-        <p>I care about user experience and building user-friendly products.</p>
         <p>
-          With 4 years of experience in Brand Marketing, I can contribute from
-          both business and technology perspectives.
+          I am a Brand Marketer-turned-Frontend Developer eager to work with a
+          company that focuses on helping clients enhance marketing and drive
+          business.{' '}
+        </p>
+        <p>
+          I adopt my user-centric mindset to create easy-to-use applications to
+          deliver a better user experience.
         </p>
         <br />
-        <a href={PDF} target='_blank'>
+        <a href={PDF} target='_blank' rel='noreferrer'>
           View my resume here
         </a>
         <div className={classes['contact-list']}> {contact}</div>
