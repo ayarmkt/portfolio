@@ -67,7 +67,7 @@ const Projects = () => {
     return (
       <div className={classes.project} key={project.title}>
         <div className={classes['project-img']}>
-          <a href={project.livedemo} target='_blank'>
+          <a href={project.livedemo} target='_blank' rel="noopener noreferrer">
             <img src={project.src} alt={project.alt} />
           </a>
         </div>
@@ -76,10 +76,10 @@ const Projects = () => {
           <p className={classes.subtitle}>{'<Personal Project>'}</p>
           <p className={classes.tech}>{project.techName}</p>
           <div className={classes.link}>
-            <a className={classes.live} href={project.livedemo} target='_blank'>
+            <a className={classes.live} href={project.livedemo} target='_blank' rel="noopener noreferrer">
               Live Demo
             </a>
-            <a className={classes.github} href={project.github} target='_blank'>
+            <a className={classes.github} href={project.github} target='_blank' rel="noopener noreferrer">
               GitHub
             </a>
           </div>

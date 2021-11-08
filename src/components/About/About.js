@@ -49,6 +49,7 @@ const About = () => {
       href={info.link}
       key={info.name}
       target='_blank'
+      rel='noopener noreferrer'
     >
       {info.icon()}
     </a>
@@ -71,7 +72,7 @@ const About = () => {
           deliver a better user experience.
         </p>
         <br />
-        <a href={PDF} target='_blank' rel='noreferrer'>
+        <a href={PDF} target='_blank' rel='noopener noreferrer'>
           View my resume here
         </a>
         <div className={classes['contact-list']}> {contact}</div>
