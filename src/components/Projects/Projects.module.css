@@ -53,16 +53,11 @@
 .project-description {
   grid-row: 2;
   text-align: center;
-  display: grid;
-  grid-template-rows: repeat(3, auto) 100px 1fr;
-  grid-template-columns: auto 1fr;
   padding: 0 60px;
   /* padding: 25px; */
 }
 
 .project-title {
-  grid-row: 1;
-  grid-column: 1;
   display: flex;
   justify-content: start;
   align-items: flex-end;
@@ -70,8 +65,6 @@
 }
 
 .subtitle {
-  grid-row: 1;
-  grid-column: 2;
   font-size: var(--fontsize-p);
   display: flex;
   justify-content: start;
@@ -95,8 +88,6 @@
   padding: 0 10px;
   margin: 0 2px;
   height: 100%;
-  display: flex;
-  align-items: center;
   border-radius: 5px;
   font-size: var(--fontsize-p);
 }
@@ -124,17 +115,9 @@
 }
 
 .github:hover {
-  background-color: var(--yellow);
+  background-color: var(--lightgray);
+  border: black;
   color: black;
-}
-
-.description {
-  grid-row: 4;
-  grid-column: span 2;
-  padding: 35px 0px 6px 0px;
-  line-height: 1.5;
-  font-size: var(--fontsize-p);
-  text-align: start;
 }
 
 /*  */
