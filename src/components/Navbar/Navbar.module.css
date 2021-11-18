@@ -1,18 +1,10 @@
 .nav {
-  padding: 0 250px;
-  height: 60px;
+  padding: 10px 100px;
+  height: 80px;
   max-width: 100%;
   display: flex;
   justify-content: space-between;
   background-color: var(--lightgray);
-}
-
-.nav.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: white;
-  z-index: 100;
 }
 
 .icon:hover {
@@ -35,19 +27,16 @@
 
 .link {
   display: block;
-  font-size: var(--fontsize-p);
+  font-size: var(--fontsize-text);
   text-align: center;
   padding: 15px 25px;
   text-decoration: none;
+  color: var(--gray);
 }
 
-.link.active {
-  border-bottom: 5px solid var(--yellow);
-  position: relative;
-}
-
+.link.active,
 .link:hover {
-  border-bottom: 5px solid var(--lightblue);
+  color: var(--royalblue);
 }
 
 /*  */
@@ -56,7 +45,7 @@
 
 /* Tablets in landscape mode, older desktop monitors */
 @media only screen and (max-width: 1365px) {
-  .nav {
+  /* .nav {
     padding: 0 100px;
-  }
+  } */
 }

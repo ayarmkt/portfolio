@@ -4,8 +4,8 @@ import { useState, useEffect, useLayoutEffect, useContext } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 
 import Navbar from './components/Navbar/Navbar';
-import About from './components/About/About';
-import Skills from './components/Skills/Skills';
+import Hero from './components/Hero/Hero';
+import AboutMe from './components/AboutMe/AboutMe';
 import Projects from './components/Projects/Projects';
 import HamburgerMenu from './components/Navbar/HamburgerMenu';
 import useWindowDimensions from './hooks/useWindowDimensions';
@@ -24,7 +24,7 @@ function App() {
     } else {
       uiCtx.setNotMobile();
     }
-  }, [vw]);
+  }, [vw, uiCtx]);
 
   const onScroll = () => {
     if (80 < window.scrollY) {
@@ -50,8 +50,8 @@ function App() {
         {uiCtx.mobile && <HamburgerMenu />}
       </header>
       <main>
-        <About />
-        <Skills />
+        <Hero />
+        <AboutMe />
         <Projects />
         <AiOutlineToTop
           className={`to-top-icon ${showIcon ? 'showIcon' : ''}`}

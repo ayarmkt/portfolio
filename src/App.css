@@ -1,14 +1,11 @@
 :root {
-  --navy: #193980;
-  --blue: #5693d2;
   --royalblue: #264de4;
   --lightblue: #27ccd8;
   --gray: #918d8d;
   --lightgray: #fafafa;
-  --yellow: #f9d249;
-  --pink: #d614f0;
   --fontsize-p: 18px;
-  --fontsize-subtitle: 22px;
+  --fontsize-text: 20px;
+  --fontsize-title: 96px;
 }
 
 * {
@@ -16,7 +13,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
-  color: var(--gray);
 }
 
 html {
