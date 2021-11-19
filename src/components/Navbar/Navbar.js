@@ -19,10 +19,10 @@ const Navbar = () => {
           <LinkScroll
             className={classes.link}
             activeClass={classes.active}
-            to='about'
+            to='aboutme'
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-40}
             duration={100}
           >
             About Me
@@ -35,7 +35,7 @@ const Navbar = () => {
             to='projects'
             spy={true}
             smooth={true}
-            offset={-70}
+            offset={-30}
             duration={100}
           >
             Projects

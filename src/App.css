@@ -3,9 +3,11 @@
   --lightblue: #27ccd8;
   --gray: #918d8d;
   --lightgray: #fafafa;
-  --fontsize-p: 18px;
-  --fontsize-text: 20px;
   --fontsize-title: 96px;
+  --fontsize-text: 20px;
+  --fontsize-p: 18px;
+  --fontsize-smallText: 16px;
+  --fontsize-minText: 14px;
 }
 
 * {

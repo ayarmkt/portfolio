@@ -2,7 +2,7 @@ import classes from './Hero.module.css';
 
 const Hero = () => {
   return (
-    <div className={classes.about} id='about'>
+    <div className={classes.about} id='hero'>
       <h1>Aya Takamura</h1>
       <p>
         <span className={classes.colorText}>

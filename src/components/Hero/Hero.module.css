@@ -19,6 +19,7 @@
   width: 50vw;
   color: var(--gray);
   text-align: center;
+  line-height: 1.3;
 }
 
 .colorText {

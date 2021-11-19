@@ -47,8 +47,10 @@ const Projects = () => {
           </a>
         </div>
         <div className={classes['project-description']}>
-          <h3 className={classes['project-title']}>{project.title}</h3>
-          <p className={classes.subtitle}>{project.subtitle}</p>
+          <div className={classes['project-title-section']}>
+            <h3 className={classes['project-title']}>{project.title}</h3>
+            <p className={classes.subtitle}>{project.subtitle}</p>
+          </div>
           <p className={classes.tech}>{project.techName}</p>
           <div className={classes.link}>
             <a
