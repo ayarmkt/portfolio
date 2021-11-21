@@ -1,0 +1,34 @@
+@import '../base';
+
+.hero {
+  max-width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .hero-content {
+    height: auto;
+    transform: translateY(-40px);
+
+    h1 {
+      font-size: 96px;
+      font-weight: 900;
+      color: black;
+    }
+
+    p {
+      width: 50vw;
+      font-size: $fontsize-largeText;
+      line-height: 1.3;
+      color: $gray;
+      text-align: center;
+    }
+  }
+
+  .hero-colorText {
+    color: $royalblue;
+    font-weight: 900;
+  }
+}

@@ -1,17 +1,16 @@
-import './App.css';
+import './App.scss';
 import React from 'react';
 import { useState, useEffect, useLayoutEffect, useContext } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
+import Hero from './components/Hero';
+import Navbar from './components/NavBar';
+import Projects from './components/Projects';
 
-import Navbar from './components/Navbar/Navbar';
-import About from './components/About/About';
-import Skills from './components/Skills/Skills';
-import Projects from './components/Projects/Projects';
-import HamburgerMenu from './components/Navbar/HamburgerMenu';
 import useWindowDimensions from './hooks/useWindowDimensions';
 import UIContext from './context/ui-context';
 import { AiOutlineToTop } from 'react-icons/ai';
-import Footer from './components/Footer/Footer';
+import AboutMe from './components/AboutMe';
+import Footer from './components/Footer';
 
 function App() {
   const uiCtx = useContext(UIContext);
@@ -24,7 +23,7 @@ function App() {
     } else {
       uiCtx.setNotMobile();
     }
-  }, [vw]);
+  }, [vw, uiCtx]);
 
   const onScroll = () => {
     if (80 < window.scrollY) {
@@ -45,19 +44,22 @@ function App() {
 
   return (
     <React.Fragment>
-      <header>
-        {!uiCtx.mobile && <Navbar />}
-        {uiCtx.mobile && <HamburgerMenu />}
-      </header>
+      <Navbar />
+      {/* {!uiCtx.mobile && <Navbar />}
+        {uiCtx.mobile && <HamburgerMenu />} */}
+
       <main>
-        <About />
-        <Skills />
+        <Hero />
+        <AboutMe />
         <Projects />
-        <AiOutlineToTop
+        {/* <About />
+        <Skills />
+        <Projects />*/}
+        {/* <AiOutlineToTop
           className={`to-top-icon ${showIcon ? 'showIcon' : ''}`}
           size='50px'
           onClick={scrollToTop}
-        />
+        /> */}
       </main>
       <Footer />
     </React.Fragment>

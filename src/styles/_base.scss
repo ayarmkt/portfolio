@@ -1,0 +1,30 @@
+$royalblue: #264de4;
+$lightblue: #27ccd8;
+$gray: #918d8d;
+$lightgray: #fafafa;
+$darkgray: #1a1a1a;
+$fontsize-title: 96px;
+$fontsize-largeText: 20px;
+$fontsize-midText: 18px;
+$fontsize-smallText: 16px;
+$fontsize-minText: 14px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  // outline: 1px solid red;
+}
+
+html {
+  background-color: $lightgray;
+}
+
+//functions
+
+//mixins
+@mixin setText($lineHeight) {
+  font-size: $fontsize-midText;
+  line-height: $lineHeight;
+}

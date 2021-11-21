@@ -1,0 +1,13 @@
+@import '../base';
+
+.footer {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  p {
+    color: $darkgray;
+  }
+}

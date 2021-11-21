@@ -1,0 +1,45 @@
+@import '../base';
+
+.navbar {
+  padding: 10px 100px;
+  height: 80px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: $lightgray;
+
+  li {
+    display: inline;
+    float: left;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.home-icon {
+  &:hover {
+    cursor: pointer;
+  }
+
+  & img {
+    height: 100%;
+    padding: 5% 0;
+  }
+}
+
+.nav-link {
+  display: block;
+  font-size: $fontsize-midText;
+  text-align: center;
+  padding: 15px 25px;
+  text-decoration: none;
+  color: $gray;
+
+  &-active,
+  &:hover {
+    color: $royalblue;
+    font-weight: 500;
+  }
+}
