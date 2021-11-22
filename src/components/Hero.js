@@ -7,7 +7,7 @@ const Hero = () => {
           <span className='hero-colorText'>
             a Brand Marketer-turned-Frontend Developer
           </span>
-          who cares about user experience when building products. I am
+          &nbsp;who cares about user experience when building products. I am
           passionate about understanding customers’ needs. I adopt my
           user-centric mindset to create easy-to-use applications.
         </p>

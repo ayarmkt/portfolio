@@ -11,6 +11,7 @@ import UIContext from './context/ui-context';
 import { AiOutlineToTop } from 'react-icons/ai';
 import AboutMe from './components/AboutMe';
 import Footer from './components/Footer';
+import HamburgerMenu from './components/HamburgerMenu';
 
 function App() {
   const uiCtx = useContext(UIContext);
@@ -18,7 +19,7 @@ function App() {
   const { width: vw } = useWindowDimensions();
 
   useEffect(() => {
-    if (vw <= 1023) {
+    if (vw <= 420) {
       uiCtx.setMobile();
     } else {
       uiCtx.setNotMobile();
@@ -39,12 +40,13 @@ function App() {
   }, []);
 
   const scrollToTop = () => {
-    scroll.scrollToTop({ duration: 100 });
+    scroll.scrollToTop({ duration: 700 });
   };
 
   return (
     <React.Fragment>
-      <Navbar />
+      {!uiCtx.mobile && <Navbar />}
+      {uiCtx.mobile && <HamburgerMenu />}
       {/* {!uiCtx.mobile && <Navbar />}
         {uiCtx.mobile && <HamburgerMenu />} */}
 
@@ -55,11 +57,11 @@ function App() {
         {/* <About />
         <Skills />
         <Projects />*/}
-        {/* <AiOutlineToTop
+        <AiOutlineToTop
           className={`to-top-icon ${showIcon ? 'showIcon' : ''}`}
           size='50px'
           onClick={scrollToTop}
-        /> */}
+        />
       </main>
       <Footer />
     </React.Fragment>

@@ -81,8 +81,10 @@ const Projects = () => {
 
   return (
     <div className='projects' id='projects'>
-      <SectionTitle className='projects-title'>Projects</SectionTitle>
-      <div className='projects-list'>{projectList}</div>
+      <div className='projects-content'>
+        <SectionTitle className='projects-title'>Projects</SectionTitle>
+        <div className='projects-list'>{projectList}</div>
+      </div>
     </div>
   );
 };

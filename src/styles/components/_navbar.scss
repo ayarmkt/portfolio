@@ -43,3 +43,15 @@
     font-weight: 500;
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .navbar {
+    padding: 10px 20px;
+    height: 60px;
+  }
+
+  .nav-link {
+    font-size: $fontsize-smallText;
+    padding: 10px 15px;
+  }
+}

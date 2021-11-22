@@ -1,0 +1,97 @@
+@import '../base';
+
+.hamburger-menu {
+  position: sticky;
+  width: 100vw;
+  height: 50px;
+  top: 0;
+  //   top: 30px;
+  //   right: 30px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  //   background-color: rgba($darkgray, 0.1);
+
+  &-list {
+    width: 100%;
+    height: 90vh;
+    background-color: $royalblue;
+    position: absolute;
+    top: 50px;
+    z-index: 50;
+
+    li {
+      height: 100px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hamburger-nav-link {
+        font-size: $fontsize-largeText;
+        color: white;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+// @keyframes menuShow {
+//   from {
+//     opacity: 0%;
+//     transform: translateY(-50%);
+//   }
+
+//   to {
+//     transform: translateY(0%);
+//   }
+// }
+
+// @keyframes menuHide {
+//   from {
+//     transform: translateY(0%);
+//   }
+
+//   to {
+//     opacity: 0%;
+//     transform: translateY(-50%);
+//   }
+// }
+
+//HAMBURGER ICON
+.hamburger-center {
+  //   top: 30px;
+  //   right: 30px;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  position: absolute;
+  right: 15px;
+  width: 40px;
+
+  &:before,
+  &:after,
+  & div {
+    background: $darkgray;
+    content: '';
+    display: block;
+    height: 4px;
+    border-radius: 3px;
+    margin: 7px 0;
+    transition: 0.5s;
+  }
+}
+
+.menuIcon-active:before {
+  transform: translateY(12px) rotate(135deg);
+}
+.menuIcon-active:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+.menuIcon-active div {
+  transform: scale(0);
+}

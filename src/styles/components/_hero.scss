@@ -11,15 +11,17 @@
   .hero-content {
     height: auto;
     transform: translateY(-40px);
+    width: 50vw;
 
     h1 {
       font-size: 96px;
       font-weight: 900;
-      color: black;
+      color: $darkgray;
+      text-align: center;
     }
 
     p {
-      width: 50vw;
+      // width: 50vw;
       font-size: $fontsize-largeText;
       line-height: 1.3;
       color: $gray;
@@ -30,5 +32,24 @@
   .hero-colorText {
     color: $royalblue;
     font-weight: 900;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero {
+    height: calc(100vh - 60px);
+
+    .hero-content {
+      width: 90vw;
+      transform: translateY(-30px);
+
+      h1 {
+        font-size: 60px;
+      }
+
+      p {
+        font-size: $fontsize-midText;
+      }
+    }
   }
 }
