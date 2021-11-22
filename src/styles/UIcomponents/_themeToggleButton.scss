@@ -60,6 +60,7 @@
   //   background-color: #4d4d4d;
   //   background-color: rgb(16, 156, 211);
   background-color: $lightblue;
+  border: 1px solid darken($color: $lightblue, $amount: 20%);
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -73,6 +74,7 @@
 .react-toggle--checked .react-toggle-track {
   //   background-color: #19ab27;
   background-color: $darkgray;
+  border: 1px solid white;
 }
 
 .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
