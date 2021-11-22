@@ -18,146 +18,154 @@
     display: grid;
     grid-gap: 45px;
     justify-items: center;
-  }
 
-  &-summary {
-    align-self: center;
-    display: grid;
-    grid-column: auto 1fr;
-    grid-gap: 30px;
-    align-items: center;
-    // border: 1px solid red;
-  }
+    .aboutme-summary {
+      align-self: center;
+      display: grid;
+      grid-column: auto 1fr;
+      grid-gap: 30px;
+      align-items: center;
+      // border: 1px solid red;
 
-  &-profilePic {
-    grid-column: 1;
+      .aboutme-profilePic {
+        grid-column: 1;
 
-    img {
-      width: 300px;
-    }
-  }
+        img {
+          width: 300px;
+        }
+      }
 
-  &-summary-text {
-    grid-column: 2;
+      .aboutme-summary-text {
+        grid-column: 2;
 
-    .aboutme-title {
-      // color: $darkgray;
-    }
+        .aboutme-title {
+          color: $darkgray;
+        }
 
-    p {
-      @include setText(1.5);
-      margin-top: 30px;
-    }
-  }
-
-  &-text-additional {
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    // border: 1px solid red;
-  }
-
-  &-text-personal {
-    grid-column: 1;
-
-    h3 {
-      font-size: 32px;
-      // color: $darkgray;
+        p {
+          @include setText(1.5);
+          margin-top: 30px;
+        }
+      }
     }
 
-    p {
-      @include setText(2);
-      margin-top: 15px;
+    .aboutme-text-additional {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      // border: 1px solid red;
+
+      .aboutme-text-personal {
+        grid-column: 1;
+
+        h3 {
+          font-size: 32px;
+          //color: $darkgray;
+        }
+
+        p {
+          @include setText(2);
+          margin-top: 15px;
+        }
+      }
+
+      .aboutme-text-skills {
+        grid-column: 2;
+
+        h3 {
+          font-size: 32px;
+          //color: $darkgray;
+        }
+
+        p {
+          @include setText(2);
+          margin-top: 15px;
+        }
+
+        .aboutme-skills-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+          grid-auto-rows: 1fr;
+          margin-top: 15px;
+
+          & > * {
+            filter: unset;
+          }
+
+          &::before {
+            content: '';
+            width: 0;
+            padding-bottom: 100%;
+            grid-row: 1 / 1;
+            grid-column: 1 / 1;
+          }
+
+          & > *:first-child {
+            grid-row: 1 / 1;
+            grid-column: 1 / 1;
+          }
+        }
+
+        .skillsIcon {
+          width: 60%;
+          height: 60%;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
+
+        .html:hover {
+          fill: #e34f26;
+        }
+
+        .css:hover {
+          fill: #264de4;
+        }
+
+        .tailwindcss:hover {
+          fill: #06b6d4;
+        }
+
+        .javascript:hover {
+          fill: #f7df1e;
+        }
+
+        .react:hover {
+          fill: #00d8ff;
+        }
+
+        .redux:hover {
+          fill: #764abc;
+        }
+
+        .firebase:hover {
+          fill: #ffcb2d;
+        }
+
+        .figma:hover {
+          fill: #ff7263;
+        }
+
+        .npm:hover {
+          fill: #cb3837;
+        }
+      }
     }
-  }
 
-  &-text-skills {
-    grid-column: 2;
+    &.dark {
+      .aboutme-summary {
+        .aboutme-summary-text {
+          .aboutme-title {
+            color: white;
+          }
+        }
+      }
 
-    h3 {
-      font-size: 32px;
-      // color: $darkgray;
+      h3 {
+        color: white;
+      }
     }
-
-    p {
-      @include setText(2);
-      margin-top: 15px;
-    }
-  }
-
-  &-skills-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    grid-auto-rows: 1fr;
-    margin-top: 15px;
-
-    & > * {
-      filter: unset;
-    }
-
-    &::before {
-      content: '';
-      width: 0;
-      padding-bottom: 100%;
-      grid-row: 1 / 1;
-      grid-column: 1 / 1;
-    }
-
-    & > *:first-child {
-      grid-row: 1 / 1;
-      grid-column: 1 / 1;
-    }
-  }
-
-  // .skill {
-  //   p {
-  //     font-size: $fontsize-smallText;
-  //   }
-  // }
-
-  .skillsIcon {
-    width: 60%;
-    height: 60%;
-
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-
-  .html:hover {
-    fill: #e34f26;
-  }
-
-  .css:hover {
-    fill: #264de4;
-  }
-
-  .tailwindcss:hover {
-    fill: #06b6d4;
-  }
-
-  .javascript:hover {
-    fill: #f7df1e;
-  }
-
-  .react:hover {
-    fill: #00d8ff;
-  }
-
-  .redux:hover {
-    fill: #764abc;
-  }
-
-  .firebase:hover {
-    fill: #ffcb2d;
-  }
-
-  .figma:hover {
-    fill: #ff7263;
-  }
-
-  .npm:hover {
-    fill: #cb3837;
   }
 }
 

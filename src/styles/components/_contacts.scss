@@ -27,7 +27,7 @@
     }
 
     .contact-icon {
-      fill: black;
+      fill: $gray;
       width: 100%;
       height: 100%;
     }
@@ -35,7 +35,17 @@
 
   .contacts-line {
     width: 3px;
-    background-color: black;
+    background-color: $gray;
     height: 120px;
+  }
+
+  &.dark {
+    .contact-icon {
+      fill: white;
+    }
+
+    .contacts-line {
+      background-color: white;
+    }
   }
 }

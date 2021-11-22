@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import SectionTitle from '../UIcomponents/SectionTitle';
+import UIContext from '../context/ui-context';
 import project1 from '../assets/readyevent.png';
 import project2 from '../assets/bug-tracker.png';
 import project3 from '../assets/weather-app.png';
@@ -48,6 +49,8 @@ const projectArr = [
 ];
 
 const Projects = () => {
+  const uiCtx = useContext(UIContext);
+
   const projectList = projectArr.map((project) => {
     return (
       <div className='project' key={project.title}>
@@ -81,7 +84,7 @@ const Projects = () => {
 
   return (
     <div className='projects' id='projects'>
-      <div className='projects-content'>
+      <div className={`projects-content ${uiCtx.isDark ? 'dark' : null}`}>
         <SectionTitle className='projects-title'>Projects</SectionTitle>
         <div className='projects-list'>{projectList}</div>
       </div>
