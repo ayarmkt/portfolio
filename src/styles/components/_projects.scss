@@ -7,6 +7,11 @@
     .projects-title {
       margin: 45px 0 30px 150px;
       color: $darkgray;
+      opacity: 0;
+
+      &.fadeIn {
+        animation: fadeIn linear 0.8s forwards;
+      }
     }
 
     .projects-list {
@@ -20,6 +25,11 @@
       .project {
         display: flex;
         flex-direction: column;
+        opacity: 0;
+
+        &.fadeIn {
+          animation: fadeIn linear 0.8s forwards;
+        }
 
         /* PROJECT IMAGE */
         &-img {
@@ -150,6 +160,17 @@
         }
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+
+  to {
+    opacity: 1;
   }
 }
 

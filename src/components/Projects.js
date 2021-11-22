@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef, useState, useLayoutEffect } from 'react';
 import SectionTitle from '../UIcomponents/SectionTitle';
 import UIContext from '../context/ui-context';
 import project1 from '../assets/readyevent.png';
@@ -50,10 +50,35 @@ const projectArr = [
 
 const Projects = () => {
   const uiCtx = useContext(UIContext);
+  const ref = useRef();
+  const [fadeIn, setFadeIn] = useState(false);
+
+  const onScroll = () => {
+    const topPos = ref.current.offsetTop;
+    const bottomPos = ref.current.offsetTop + ref.current.offsetHeight;
+
+    if (
+      topPos - 350 < window.scrollY + window.innerHeight &&
+      bottomPos > window.scrollY
+    ) {
+      setFadeIn(true);
+    } else {
+      setFadeIn(false);
+    }
+  };
+
+  useLayoutEffect(() => {
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const projectList = projectArr.map((project) => {
     return (
-      <div className='project' key={project.title}>
+      <div
+        className={`project ${fadeIn ? 'fadeIn' : null}`}
+        key={project.title}
+        ref={ref}
+      >
         <div className='project-img'>
           <a href={project.livedemo} target='_blank' rel='noopener noreferrer'>
             <img src={project.src} alt={project.alt} />
@@ -85,7 +110,12 @@ const Projects = () => {
   return (
     <div className='projects' id='projects'>
       <div className={`projects-content ${uiCtx.isDark ? 'dark' : null}`}>
-        <SectionTitle className='projects-title'>Projects</SectionTitle>
+        <SectionTitle
+          className={`projects-title ${fadeIn ? 'fadeIn' : null}`}
+          ref={ref}
+        >
+          Projects
+        </SectionTitle>
         <div className='projects-list'>{projectList}</div>
       </div>
     </div>

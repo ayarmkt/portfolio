@@ -25,6 +25,7 @@
       grid-column: auto 1fr;
       grid-gap: 30px;
       align-items: center;
+      opacity: 0;
       // border: 1px solid red;
 
       .aboutme-profilePic {
@@ -47,13 +48,23 @@
           margin-top: 30px;
         }
       }
+
+      &.fadeIn {
+        animation: fadeIn linear 0.8s forwards;
+      }
     }
 
     .aboutme-text-additional {
       display: grid;
       width: 100%;
       grid-template-columns: repeat(2, 1fr);
+      opacity: 0;
       // border: 1px solid red;
+
+      &.fadeIn {
+        animation: fadeIn linear 0.8s forwards;
+        animation-delay: 0.1s;
+      }
 
       .aboutme-text-personal {
         grid-column: 1;
@@ -166,6 +177,17 @@
         color: white;
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5%);
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
