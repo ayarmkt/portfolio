@@ -1,3 +1,4 @@
+//variables
 $royalblue: #264de4;
 $lightblue: #27ccd8;
 $gray: #615e5e;
@@ -9,26 +10,23 @@ $fontsize-midText: 18px;
 $fontsize-smallText: 16px;
 $fontsize-minText: 14px;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
-  // outline: 1px solid red;
-}
-
-html {
-  background-color: $lightgray;
-}
-
 //functions
-// @function setTextColor($color) {
-//   @if (lightness($color) > 70) {
-//     @return $darkgray;
-//   } @else {
-//     @return white;
-//   }
-// }
+
+@function setTextColor($color) {
+  @if (lightness($color) > 70) {
+    @return $gray;
+  } @else {
+    @return white;
+  }
+}
+
+@function setHighlightTextColor($color) {
+  @if (lightness($color) > 70) {
+    @return $lightblue;
+  } @else {
+    @return $royalblue;
+  }
+}
 
 //mixins
 @mixin setText($lineHeight) {
@@ -36,7 +34,22 @@ html {
   line-height: $lineHeight;
 }
 
-// @mixin setBackgroundColor($color) {
-//   background-color: $color;
-//   color: setTextColor($color);
-// }
+@mixin setBGAndTextColor($color) {
+  background-color: $color;
+  color: setTextColor($color);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  @include setBGAndTextColor($lightgray);
+}
+
+body.dark {
+  @include setBGAndTextColor($darkgray);
+}
