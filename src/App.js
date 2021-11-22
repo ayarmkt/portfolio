@@ -12,6 +12,7 @@ import { AiOutlineToTop } from 'react-icons/ai';
 import AboutMe from './components/AboutMe';
 import Footer from './components/Footer';
 import HamburgerMenu from './components/HamburgerMenu';
+import Contacts from './components/Contacts';
 
 function App() {
   const uiCtx = useContext(UIContext);
@@ -63,7 +64,9 @@ function App() {
           onClick={scrollToTop}
         />
       </main>
+      {/* <Contacts /> */}
       <Footer />
+      <Contacts />
     </React.Fragment>
   );
 }

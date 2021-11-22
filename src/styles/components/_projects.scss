@@ -4,11 +4,11 @@
   max-width: 100%;
 
   &-title {
-    margin: 45px 0 30px 100px;
+    margin: 45px 0 30px 150px;
   }
 
   &-list {
-    width: calc(100vw - 200px);
+    width: calc(100vw - (150px * 2));
     margin: 0px auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -1,0 +1,41 @@
+.contacts-container {
+  //   position: sticky;
+  position: fixed;
+  width: 50px;
+  bottom: 0px;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 50;
+  //   border: 1px solid red;
+  //   margin-bottom: -600px;
+
+  //   .contacts-iconList {
+  //     margin-bottom: -600px;
+  //   }
+
+  .contact-item {
+    width: 20px;
+    height: 20px;
+    margin: 30px;
+
+    .contact-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-icon {
+      fill: black;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .contacts-line {
+    width: 3px;
+    background-color: black;
+    height: 120px;
+  }
+}
