@@ -1,7 +1,9 @@
 import { Link as LinkScroll } from 'react-scroll';
 import { animateScroll as scroll } from 'react-scroll';
+
 import icon from '../assets/icon.png';
 import PDF from '../assets/CV_Aya Takamura.pdf';
+import ThemeToggleButton from '../UIcomponents/ThemeToggleButton';
 
 const Navbar = () => {
   const scrollToTop = () => {
@@ -50,6 +52,9 @@ const Navbar = () => {
             >
               Resume
             </a>
+          </li>
+          <li>
+            <ThemeToggleButton />
           </li>
         </ul>
       </nav>
