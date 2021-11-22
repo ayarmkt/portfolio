@@ -4,8 +4,12 @@ import { animateScroll as scroll } from 'react-scroll';
 import icon from '../assets/icon.png';
 import PDF from '../assets/CV_Aya Takamura.pdf';
 import ThemeToggleButton from '../UIcomponents/ThemeToggleButton';
+import { useContext } from 'react';
+import UIContext from '../context/ui-context';
 
 const Navbar = () => {
+  const uiCtx = useContext(UIContext);
+
   const scrollToTop = () => {
     scroll.scrollToTop({ duration: 500 });
   };
@@ -16,7 +20,7 @@ const Navbar = () => {
         <div className='home-icon'>
           <img src={icon} alt='home' onClick={scrollToTop} />
         </div>
-        <ul>
+        <ul className={`navbar-links-list ${uiCtx.isDark ? 'dark' : null}`}>
           <li>
             <LinkScroll
               className='nav-link'
@@ -45,7 +49,7 @@ const Navbar = () => {
           </li>
           <li>
             <a
-              className='nav-link'
+              className='nav-link-resume'
               href={PDF}
               target='_blank'
               rel='noopener noreferrer'

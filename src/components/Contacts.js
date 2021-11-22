@@ -1,5 +1,7 @@
+import { useContext } from 'react';
 import { FaLinkedin, FaTwitterSquare, FaGithub } from 'react-icons/fa';
 import { SiHashnode } from 'react-icons/si';
+import UIContext from '../context/ui-context';
 
 const contactInfo = [
   {
@@ -33,6 +35,8 @@ const contactInfo = [
 ];
 
 const Contacts = () => {
+  const uiCtx = useContext(UIContext);
+
   const contact = contactInfo.map((info) => (
     <div className='contact-item'>
       <a
@@ -48,7 +52,7 @@ const Contacts = () => {
   ));
 
   return (
-    <div className='contacts-container'>
+    <div className={`contacts-container ${uiCtx.isDark ? 'dark' : null}`}>
       <div className='contacts-iconList'>{contact}</div>
       <div className='contacts-line' />
     </div>

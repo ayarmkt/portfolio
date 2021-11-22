@@ -11,6 +11,8 @@ import {
   SiTailwindcss,
   SiNpm,
 } from 'react-icons/si';
+import { useContext } from 'react';
+import UIContext from '../context/ui-context';
 
 const skillsArr = [
   {
@@ -70,6 +72,8 @@ const skillsArr = [
 ];
 
 const AboutMe = () => {
+  const uiCtx = useContext(UIContext);
+
   const skillsList = skillsArr.map((skill) => {
     let icon = skill.icon();
     return (
@@ -81,7 +85,7 @@ const AboutMe = () => {
 
   return (
     <div className='aboutme' id='aboutme'>
-      <div className='aboutme-content'>
+      <div className={`aboutme-content ${uiCtx.isDark ? 'dark' : null}`}>
         <div className='aboutme-summary'>
           <div className='aboutme-profilePic'>
             <img src={ProfilePic} alt='Profile' />

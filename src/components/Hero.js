@@ -1,7 +1,12 @@
+import { useContext } from 'react';
+import UIContext from '../context/ui-context';
+
 const Hero = () => {
+  const uiCtx = useContext(UIContext);
+
   return (
     <div className='hero' id='hero'>
-      <div className='hero-content'>
+      <div className={`hero-content ${uiCtx.isDark ? 'dark' : null}`}>
         <h1>Aya Takamura</h1>
         <p>
           <span className='hero-colorText'>
