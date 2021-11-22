@@ -13,6 +13,7 @@ import {
 } from 'react-icons/si';
 import { useContext } from 'react';
 import UIContext from '../context/ui-context';
+import { useRef, useState, useLayoutEffect } from 'react';
 
 const skillsArr = [
   {
@@ -73,6 +74,27 @@ const skillsArr = [
 
 const AboutMe = () => {
   const uiCtx = useContext(UIContext);
+  const ref = useRef();
+  const [fadeIn, setFadeIn] = useState(false);
+
+  const onScroll = () => {
+    const topPos = ref.current.offsetTop;
+    const bottomPos = ref.current.offsetTop + ref.current.offsetHeight;
+
+    if (
+      topPos + 150 < window.scrollY + window.innerHeight &&
+      bottomPos > window.scrollY
+    ) {
+      setFadeIn(true);
+    } else {
+      setFadeIn(false);
+    }
+  };
+
+  useLayoutEffect(() => {
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const skillsList = skillsArr.map((skill) => {
     let icon = skill.icon();
@@ -85,8 +107,11 @@ const AboutMe = () => {
 
   return (
     <div className='aboutme' id='aboutme'>
-      <div className={`aboutme-content ${uiCtx.isDark ? 'dark' : null}`}>
-        <div className='aboutme-summary'>
+      <div
+        className={`aboutme-content ${uiCtx.isDark ? 'dark' : null}`}
+        ref={ref}
+      >
+        <div className={`aboutme-summary ${fadeIn ? 'fadeIn' : null}`}>
           <div className='aboutme-profilePic'>
             <img src={ProfilePic} alt='Profile' />
           </div>
@@ -106,7 +131,7 @@ const AboutMe = () => {
             </p>
           </div>
         </div>
-        <div className='aboutme-text-additional'>
+        <div className={`aboutme-text-additional ${fadeIn ? 'fadeIn' : null}`}>
           <div className='aboutme-text-personal'>
             <h3>More About Me</h3>
             <p>
