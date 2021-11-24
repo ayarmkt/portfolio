@@ -1,19 +1,18 @@
 @import '../base';
 
+%h3-largeScreen {
+  font-size: 32px;
+}
+
 .aboutme {
   max-width: 100%;
   min-height: 100vh;
-  // background-color: $darkgray;
-  // background-color: $lightgray;
-  // color: white;
-  // color: $gray;
   display: flex;
   justify-content: center;
   align-items: center;
 
   &-content {
     width: 60vw;
-    // width: calc(100vw - (200px * 2));
     height: auto;
     padding: 30px 0;
     display: grid;
@@ -27,7 +26,6 @@
       grid-gap: 30px;
       align-items: center;
       opacity: 0;
-      // border: 1px solid red;
 
       .aboutme-profilePic {
         grid-column: 1;
@@ -60,7 +58,6 @@
       width: 100%;
       grid-template-columns: repeat(2, 1fr);
       opacity: 0;
-      // border: 1px solid red;
 
       &.fadeIn {
         animation: fadeIn linear 0.8s forwards;
@@ -71,8 +68,7 @@
         grid-column: 1;
 
         h3 {
-          font-size: 32px;
-          //color: $darkgray;
+          @extend %h3-largeScreen;
         }
 
         p {
@@ -85,8 +81,7 @@
         grid-column: 2;
 
         h3 {
-          font-size: 32px;
-          //color: $darkgray;
+          @extend %h3-largeScreen;
         }
 
         p {
@@ -198,47 +193,61 @@
 
     &-content {
       width: 90vw;
-    }
+      padding: 0 30px;
 
-    &-summary {
-      grid-gap: 0px;
-    }
+      .aboutme-summary {
+        grid-gap: 0px;
 
-    &-profilePic {
-      display: none;
-    }
-
-    &-text-additional {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-    }
-
-    &-text-personal {
-      grid-column: 1;
-      grid-row: 1;
-
-      // h3 {
-      //   font-size: 32px;
-      // }
-
-      // p {
-      //   @include setText(2);
-      //   margin-top: 15px;
-      // }
-    }
-
-    &-text-skills {
-      grid-column: 1;
-      grid-row: 2;
-
-      h3 {
-        margin-top: 45px;
+        .aboutme-profilePic {
+          display: none;
+        }
       }
 
-      // p {
-      //   @include setText(2);
-      //   margin-top: 15px;
-      // }
+      .aboutme-text-additional {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        grid-gap: 45px;
+
+        .aboutme-text-personal {
+          grid-column: 1;
+          grid-row: 1;
+        }
+
+        .aboutme-text-skills {
+          grid-column: 1;
+          grid-row: 2;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  %h3-smallScreen {
+    font-size: 25px;
+  }
+
+  .aboutme {
+    &-content {
+      padding: 0px;
+
+      .aboutme-text-additional {
+        .aboutme-text-personal {
+          h3 {
+            @extend %h3-smallScreen;
+          }
+
+          p {
+            @include setText(1.7);
+          }
+        }
+
+        .aboutme-text-skills {
+          h3 {
+            @extend %h3-smallScreen;
+          }
+        }
+      }
     }
   }
 }

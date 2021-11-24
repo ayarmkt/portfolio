@@ -8,12 +8,6 @@
   flex-direction: column;
   align-items: center;
   z-index: 50;
-  //   border: 1px solid red;
-  //   margin-bottom: -600px;
-
-  //   .contacts-iconList {
-  //     margin-bottom: -600px;
-  //   }
 
   .contact-item {
     width: 20px;
@@ -46,6 +40,28 @@
 
     .contacts-line {
       background-color: white;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contacts-container {
+    position: static;
+    width: auto;
+    height: auto;
+
+    .contacts-iconList {
+      display: flex;
+    }
+
+    .contact-item {
+      width: 25px;
+      height: 25px;
+      margin: 15px;
+    }
+
+    .contacts-line {
+      display: none;
     }
   }
 }

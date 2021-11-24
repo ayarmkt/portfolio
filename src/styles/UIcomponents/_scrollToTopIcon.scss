@@ -1,13 +1,7 @@
 @import '../base';
 
 .to-top-icon {
-  //   position: fixed;
-  //   bottom: 0px;
-  //   right: 0px;
   z-index: 200;
-  //   border: 1px solid red;
-  //   fill: red;
-  //   background-color: darkgoldenrod;
   animation: fadeout 1s linear 0s forwards;
 
   &:hover {

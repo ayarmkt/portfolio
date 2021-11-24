@@ -20,14 +20,6 @@ $fontsize-minText: 14px;
   }
 }
 
-// @function setHighlightTextColor($color) {
-//   @if (lightness($color) > 70) {
-//     @return $lightblue;
-//   } @else {
-//     @return $royalblue;
-//   }
-// }
-
 //mixins
 @mixin setText($lineHeight) {
   font-size: $fontsize-midText;

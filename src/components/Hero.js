@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import UIContext from '../context/ui-context';
+import Contacts from './Contacts';
 
 const Hero = () => {
   const uiCtx = useContext(UIContext);
@@ -17,6 +18,7 @@ const Hero = () => {
           user-centric mindset to create easy-to-use applications.
         </p>
       </div>
+      <Contacts />
     </div>
   );
 };

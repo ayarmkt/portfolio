@@ -57,8 +57,6 @@
   height: 24px;
   padding: 0;
   border-radius: 30px;
-  //   background-color: #4d4d4d;
-  //   background-color: rgb(16, 156, 211);
   background-color: $lightblue;
   border: 1px solid darken($color: $lightblue, $amount: 20%);
   -webkit-transition: all 0.2s ease;
@@ -67,18 +65,15 @@
 }
 
 .react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-  //   background-color: #000000;
   background-color: darken($color: $lightblue, $amount: 20%);
 }
 
 .react-toggle--checked .react-toggle-track {
-  //   background-color: #19ab27;
   background-color: $darkgray;
   border: 1px solid white;
 }
 
 .react-toggle--checked:hover:not(.react-toggle--disabled) .react-toggle-track {
-  //   background-color: #128d15;
   background-color: darken($color: $darkgray, $amount: 20%);
 }
 
@@ -132,7 +127,6 @@
   left: 1px;
   width: 22px;
   height: 22px;
-  //   border: 1px solid #6b2f2f;
   border: 1px solid $darkgray;
   border-radius: 50%;
   background-color: #fafafa;
@@ -148,7 +142,6 @@
 
 .react-toggle--checked .react-toggle-thumb {
   left: 27px;
-  //   border-color: #19ab27;
   border-color: $darkgray;
 }
 
@@ -162,4 +155,10 @@
   -webkit-box-shadow: 0px 0px 5px 5px #0099e0;
   -moz-box-shadow: 0px 0px 5px 5px #0099e0;
   box-shadow: 0px 0px 5px 5px #0099e0;
+}
+
+@media only screen and (max-width: 420px) {
+  .dark-mode-toggle {
+    margin-left: 15px;
+  }
 }

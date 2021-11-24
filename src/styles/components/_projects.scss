@@ -7,7 +7,6 @@
   &-content {
     .projects-title {
       margin: 45px 0 30px 200px;
-      // margin: 45px 0 30px 150px;
       color: $darkgray;
       opacity: 0;
 
@@ -18,7 +17,6 @@
 
     .projects-list {
       width: calc(100vw - (200px * 2));
-      // width: calc(100vw - (150px * 2));
       margin: 0px auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -32,6 +30,7 @@
 
         &.fadeIn {
           animation: fadeIn linear 0.8s forwards;
+          animation-delay: 0.1s;
         }
 
         /* PROJECT IMAGE */
@@ -71,7 +70,6 @@
             height: auto;
             width: 100%;
             line-height: 1.8;
-            // color: $darkgray;
 
             .project-maintitle {
               font-size: $fontsize-largeText;
@@ -87,7 +85,6 @@
           .project-tech {
             line-height: 1.8;
             font-size: $fontsize-smallText;
-            // color: $darkgray;
           }
 
           .project-link {
@@ -101,10 +98,6 @@
               font-size: $fontsize-smallText;
               text-decoration: none;
               background-color: darken($lightgray, 10%);
-              // border: 1px solid red;
-
-              //color: $darkgray;
-              // box-shadow: $darkgray;
 
               &:hover {
                 cursor: pointer;
@@ -184,16 +177,15 @@
 
     &-content {
       width: 90vw;
-    }
 
-    &-title {
-      margin: 45px 0 30px 0px;
-    }
+      .projects-title {
+        margin: 45px 0 30px 0px;
+      }
 
-    &-list {
-      width: 100%;
-      grid-template-columns: 1fr;
-      grid-gap: 20px;
+      .projects-list {
+        width: 100%;
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

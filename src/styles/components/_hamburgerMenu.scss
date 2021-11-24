@@ -1,25 +1,41 @@
 @import '../base';
 
 .hamburger-menu {
-  position: sticky;
+  position: fixed;
   width: 100vw;
   height: 50px;
   top: 0;
-  //   top: 30px;
-  //   right: 30px;
-
-  position: relative;
+  z-index: 100;
   display: flex;
   align-items: center;
-  //   background-color: rgba($darkgray, 0.1);
+  justify-content: space-between;
+  background-color: $lightgray;
+
+  .hamburger-center {
+    width: 40px;
+    margin-right: 15px;
+
+    &:before,
+    &:after,
+    & div {
+      background: $darkgray;
+      content: '';
+      display: block;
+      height: 4px;
+      border-radius: 3px;
+      margin: 7px 0;
+      transition: 0.5s;
+    }
+  }
 
   &-list {
     width: 100%;
-    height: 90vh;
+    height: calc(100vh - 50px);
     background-color: $royalblue;
     position: absolute;
     top: 50px;
     z-index: 50;
+    padding: 0px;
 
     li {
       height: 100px;
@@ -35,6 +51,48 @@
 
       a {
         text-decoration: none;
+      }
+    }
+  }
+
+  &.menuIcon-active {
+    background-color: $royalblue;
+
+    .hamburger-center:before {
+      transform: translateY(12px) rotate(135deg);
+    }
+
+    .hamburger-center:after {
+      transform: translateY(-12px) rotate(-135deg);
+    }
+
+    .hamburger-center div {
+      transform: scale(0);
+    }
+  }
+
+  &.dark {
+    background-color: $darkgray;
+
+    .hamburger-menu-list {
+      background-color: $lightblue;
+
+      li {
+        .hamburger-nav-link {
+          color: $darkgray;
+        }
+      }
+    }
+
+    &.menuIcon-active {
+      background-color: $lightblue;
+    }
+
+    .hamburger-center {
+      &:before,
+      &:after,
+      & div {
+        background: white;
       }
     }
   }
@@ -61,37 +119,3 @@
 //     transform: translateY(-50%);
 //   }
 // }
-
-//HAMBURGER ICON
-.hamburger-center {
-  //   top: 30px;
-  //   right: 30px;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  position: absolute;
-  right: 15px;
-  width: 40px;
-
-  &:before,
-  &:after,
-  & div {
-    background: $darkgray;
-    content: '';
-    display: block;
-    height: 4px;
-    border-radius: 3px;
-    margin: 7px 0;
-    transition: 0.5s;
-  }
-}
-
-.menuIcon-active:before {
-  transform: translateY(12px) rotate(135deg);
-}
-.menuIcon-active:after {
-  transform: translateY(-12px) rotate(-135deg);
-}
-.menuIcon-active div {
-  transform: scale(0);
-}

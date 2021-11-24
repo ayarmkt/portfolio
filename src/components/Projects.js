@@ -58,7 +58,7 @@ const Projects = () => {
     const bottomPos = ref.current.offsetTop + ref.current.offsetHeight;
 
     if (
-      topPos - 350 < window.scrollY + window.innerHeight &&
+      topPos + 250 < window.scrollY + window.innerHeight &&
       bottomPos > window.scrollY
     ) {
       setFadeIn(true);
@@ -77,7 +77,7 @@ const Projects = () => {
       <div
         className={`project ${fadeIn ? 'fadeIn' : null}`}
         key={project.title}
-        ref={ref}
+        //ref={ref}
       >
         <div className='project-img'>
           <a href={project.livedemo} target='_blank' rel='noopener noreferrer'>
@@ -109,10 +109,13 @@ const Projects = () => {
 
   return (
     <div className='projects' id='projects'>
-      <div className={`projects-content ${uiCtx.isDark ? 'dark' : null}`}>
+      <div
+        className={`projects-content ${uiCtx.isDark ? 'dark' : null}`}
+        ref={ref}
+      >
         <SectionTitle
           className={`projects-title ${fadeIn ? 'fadeIn' : null}`}
-          ref={ref}
+          //ref={ref}
         >
           Projects
         </SectionTitle>

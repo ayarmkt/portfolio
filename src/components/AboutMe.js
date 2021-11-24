@@ -135,11 +135,11 @@ const AboutMe = () => {
           <div className='aboutme-text-personal'>
             <h3>More About Me</h3>
             <p>
-              Have Lived in: Japan, USA, Australia, France
+              ■Have Lived in: Japan, USA, Australia, France
               <br />
-              Hobbies: Traveling & Photography
+              ■Hobbies: Traveling & Photography
               <br />
-              Favorite TV Show: I'm a huge FRIENDS fan
+              ■Favorite TV Show: I'm a huge FRIENDS fan
             </p>
           </div>
           <div className='aboutme-text-skills'>
