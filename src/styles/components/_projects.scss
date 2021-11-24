@@ -2,10 +2,12 @@
 
 .projects {
   max-width: 100%;
+  padding-bottom: 100px;
 
   &-content {
     .projects-title {
-      margin: 45px 0 30px 150px;
+      margin: 45px 0 30px 200px;
+      // margin: 45px 0 30px 150px;
       color: $darkgray;
       opacity: 0;
 
@@ -15,7 +17,8 @@
     }
 
     .projects-list {
-      width: calc(100vw - (150px * 2));
+      width: calc(100vw - (200px * 2));
+      // width: calc(100vw - (150px * 2));
       margin: 0px auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
