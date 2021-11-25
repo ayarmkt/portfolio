@@ -10,7 +10,9 @@ import {
   SiFigma,
   SiTailwindcss,
   SiNpm,
+  SiJest,
 } from 'react-icons/si';
+import { FaSass } from 'react-icons/fa';
 import { useContext } from 'react';
 import UIContext from '../context/ui-context';
 import { useRef, useState, useLayoutEffect } from 'react';
@@ -50,6 +52,18 @@ const skillsArr = [
     name: 'tailwind css',
     icon() {
       return <SiTailwindcss className={`skillsIcon tailwindcss`} />;
+    },
+  },
+  {
+    name: 'sass',
+    icon() {
+      return <FaSass className={`skillsIcon sass`} />;
+    },
+  },
+  {
+    name: 'jest',
+    icon() {
+      return <SiJest className={`skillsIcon jest`} />;
     },
   },
   {
@@ -118,16 +132,15 @@ const AboutMe = () => {
           <div className='aboutme-summary-text'>
             <SectionTitle className='aboutme-title'>Hi, I'm Aya!</SectionTitle>
             <p>
-              I’m a front-end developer from Japan, currently in Paris, France.
-              Besides programming, I love traveling and photography. As a
-              front-end developer, I care about every detail to deliver a better
-              user experience.
+              I am a Front-End Developer from Tokyo, Japan, now living in Paris,
+              France. Currently a Front-End Developer, previously a Brand
+              Marketer in a top FMCG company for 4 years.
             </p>
             <p>
-              As a a Brand Marketer-turned-Frontend Developer, my goal is to
-              bridge the gap between the users and businesses to empower core
-              value. I believe that a great developer solves a problem not only
-              from a technical side but always with the end user in mind.
+              As a Brand Marketer-turned-Front-End Developer, my goal is to
+              provide solutions that create a better user experience. By
+              combining my marketing expertise with my technical skills, I can
+              push your business forward.
             </p>
           </div>
         </div>
@@ -135,15 +148,15 @@ const AboutMe = () => {
           <div className='aboutme-text-personal'>
             <h3>More About Me</h3>
             <p>
-              ■Have Lived in: Japan, USA, Australia, France
+              ■Countries I've Lived in: Japan, USA, Australia, France
               <br />
               ■Hobbies: Traveling & Photography
               <br />
-              ■Favorite TV Show: I'm a huge FRIENDS fan
+              ■Favorite TV Show: FRIENDS
             </p>
           </div>
           <div className='aboutme-text-skills'>
-            <h3>Skills</h3>
+            <h3>Tech Skills</h3>
             <div className='aboutme-skills-list'>{skillsList}</div>
           </div>
         </div>
