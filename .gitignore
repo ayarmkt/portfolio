@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 AYA_TAKAMURA.pdf
+
+/src/styles/CSS
