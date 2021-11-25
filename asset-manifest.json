@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.759858ef.chunk.css",
-    "main.js": "/portfolio/static/js/main.0bb58faa.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.0bb58faa.chunk.js.map",
-    "runtime-main.js": "/portfolio/static/js/runtime-main.71e54725.js",
-    "runtime-main.js.map": "/portfolio/static/js/runtime-main.71e54725.js.map",
-    "static/js/2.03a140bb.chunk.js": "/portfolio/static/js/2.03a140bb.chunk.js",
-    "static/js/2.03a140bb.chunk.js.map": "/portfolio/static/js/2.03a140bb.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.2dd37aa8.chunk.css",
+    "main.js": "/portfolio/static/js/main.83151f8c.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.83151f8c.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.bcd5af5a.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.bcd5af5a.js.map",
+    "static/js/2.48954d90.chunk.js": "/portfolio/static/js/2.48954d90.chunk.js",
+    "static/js/2.48954d90.chunk.js.map": "/portfolio/static/js/2.48954d90.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "static/css/main.759858ef.chunk.css.map": "/portfolio/static/css/main.759858ef.chunk.css.map",
-    "static/js/2.03a140bb.chunk.js.LICENSE.txt": "/portfolio/static/js/2.03a140bb.chunk.js.LICENSE.txt",
-    "static/media/CV_Aya Takamura.e2bb6a3b.pdf": "/portfolio/static/media/CV_Aya Takamura.e2bb6a3b.pdf",
-    "static/media/bug-tracker.75052e7a.png": "/portfolio/static/media/bug-tracker.75052e7a.png",
-    "static/media/calculator.3000e89f.png": "/portfolio/static/media/calculator.3000e89f.png",
-    "static/media/profile-pic.380f3b72.png": "/portfolio/static/media/profile-pic.380f3b72.png",
-    "static/media/weather-app.340ded8c.png": "/portfolio/static/media/weather-app.340ded8c.png"
+    "static/css/main.2dd37aa8.chunk.css.map": "/portfolio/static/css/main.2dd37aa8.chunk.css.map",
+    "static/js/2.48954d90.chunk.js.LICENSE.txt": "/portfolio/static/js/2.48954d90.chunk.js.LICENSE.txt",
+    "static/media/CV_Aya Takamura.472653f0.pdf": "/portfolio/static/media/CV_Aya Takamura.472653f0.pdf",
+    "static/media/bug-tracker.807d181a.png": "/portfolio/static/media/bug-tracker.807d181a.png",
+    "static/media/calculator.30b0300a.png": "/portfolio/static/media/calculator.30b0300a.png",
+    "static/media/profile-pic.a992e753.png": "/portfolio/static/media/profile-pic.a992e753.png",
+    "static/media/readyevent.2fc2c214.png": "/portfolio/static/media/readyevent.2fc2c214.png",
+    "static/media/weather-app.5d35cc84.png": "/portfolio/static/media/weather-app.5d35cc84.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.71e54725.js",
-    "static/js/2.03a140bb.chunk.js",
-    "static/css/main.759858ef.chunk.css",
-    "static/js/main.0bb58faa.chunk.js"
+    "static/js/runtime-main.bcd5af5a.js",
+    "static/js/2.48954d90.chunk.js",
+    "static/css/main.2dd37aa8.chunk.css",
+    "static/js/main.83151f8c.chunk.js"
   ]
 }
