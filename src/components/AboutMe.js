@@ -133,8 +133,8 @@ const AboutMe = () => {
             <SectionTitle className='aboutme-title'>Hi, I'm Aya!</SectionTitle>
             <p>
               I am a Front-End Developer from Tokyo, Japan, now living in Paris,
-              France. Currently a Front-End Developer, previously a Brand
-              Marketer in a top FMCG company for 4 years.
+              France. Previously a Brand Marketer in a top FMCG company for 4
+              years.
             </p>
             <p>
               As a Brand Marketer-turned-Front-End Developer, my goal is to
