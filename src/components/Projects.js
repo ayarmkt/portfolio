@@ -10,8 +10,7 @@ const projectArr = [
   {
     title: 'readyevent',
     subtitle: '<Team Project>',
-    techName:
-      'React (including React Context) | Tailwind CSS | Google API | MUI | npm | Figma | Heroku',
+    techName: 'React | Tailwind CSS | Google API | MUI | npm | Figma | Heroku',
     src: project1,
     alt: 'readyevent',
     livedemo: 'https://readyevent.herokuapp.com/',
@@ -20,8 +19,7 @@ const projectArr = [
   {
     title: 'Bug Tracker',
     subtitle: '<Personal Project>',
-    techName:
-      'React (including React Context) | Redux | CSS | Firebase | npm | Figma',
+    techName: 'React | Redux | CSS | Firebase | npm | Figma',
     src: project2,
     alt: 'bug tracker app',
     livedemo: 'https://bug-tracker-app-75bd0.firebaseapp.com',
@@ -31,7 +29,7 @@ const projectArr = [
     title: 'Weather App',
     subtitle: '<Personal Project>',
     techName:
-      'React (including React Context) | CSS | OpenWeatherMap API | npm | Figma | React Testing Library | Netlify',
+      'React | CSS | OpenWeatherMap API | npm | Figma | React Testing Library | Netlify',
     src: project3,
     alt: 'weather app',
     livedemo: 'https://ayatakamura-react-weather-app.netlify.app/',
@@ -77,7 +75,6 @@ const Projects = () => {
       <div
         className={`project ${fadeIn ? 'fadeIn' : null}`}
         key={project.title}
-        //ref={ref}
       >
         <div className='project-img'>
           <a href={project.livedemo} target='_blank' rel='noopener noreferrer'>
@@ -113,10 +110,7 @@ const Projects = () => {
         className={`projects-content ${uiCtx.isDark ? 'dark' : null}`}
         ref={ref}
       >
-        <SectionTitle
-          className={`projects-title ${fadeIn ? 'fadeIn' : null}`}
-          //ref={ref}
-        >
+        <SectionTitle className={`projects-title ${fadeIn ? 'fadeIn' : null}`}>
           Projects
         </SectionTitle>
         <div className='projects-list'>{projectList}</div>
