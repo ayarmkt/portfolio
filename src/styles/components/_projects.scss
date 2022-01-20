@@ -72,9 +72,12 @@
             line-height: 1.8;
 
             .project-maintitle {
-              font-size: $fontsize-largeText;
+              //font-size: $fontsize-largeText;
+              //font-size: 32px;
+              font-size: 23px;
               font-weight: 900;
-              color: $darkgray;
+              //color: $darkgray;
+              color: $gray;
             }
 
             .project-subtitle {
@@ -89,19 +92,24 @@
 
           .project-link {
             padding: 10px 0;
+            //padding: 5px 0;
 
             a {
-              padding: 5px 10px;
+              //padding: 5px 10px;
+              padding: 3px 8px;
               margin-right: 10px;
               line-height: 1.8;
               border-radius: 5px;
               font-size: $fontsize-smallText;
               text-decoration: none;
-              background-color: darken($lightgray, 10%);
+              //background-color: darken($lightgray, 10%);
+              background-color: $lightgray;
+              border: 1px solid $gray;
 
               &:hover {
                 cursor: pointer;
                 background-color: $royalblue;
+                border: 1px solid $royalblue;
                 color: white;
               }
 
@@ -138,10 +146,14 @@
 
           .project-link {
             a {
-              color: $darkgray;
+              //color: $darkgray;
+              color: white;
+              background-color: $darkgray;
+              border: 1px solid white;
 
               &:hover {
                 background-color: $lightblue;
+                border: 1px solid $lightblue;
                 color: $darkgray;
               }
 

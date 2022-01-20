@@ -11,7 +11,6 @@ $fontsize-smallText: 16px;
 $fontsize-minText: 14px;
 
 //functions
-
 @function setTextColor($color) {
   @if (lightness($color) > 70) {
     @return $gray;
