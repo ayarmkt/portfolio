@@ -20,10 +20,10 @@ $fontsize-minText: 14px;
 }
 
 //mixins
-@mixin setText($lineHeight) {
-  font-size: $fontsize-midText;
-  line-height: $lineHeight;
-}
+// @mixin setText($lineHeight) {
+//   font-size: $fontsize-midText;
+//   line-height: $lineHeight;
+// }
 
 @mixin setBGAndTextColor($color) {
   background-color: $color;
