@@ -46,7 +46,15 @@
 
 @media only screen and (max-width: 767px) {
   .contacts-container {
-    position: static;
+    //position: static;
+    //position: absolute;
+    position: relative;
+    //width: 0px;
+    top: 50px;
+    //bottom: 0px;
+    left: 0px;
+    //border: 1px solid red;
+    //position: unset;
     width: auto;
     height: auto;
 
