@@ -43,7 +43,9 @@
         }
 
         p {
-          @include setText(1.5);
+          //@include setText(1.5);
+          font-size: $fontsize-midText;
+          line-height: 1.5;
           margin-top: 30px;
         }
       }
@@ -72,7 +74,9 @@
         }
 
         p {
-          @include setText(2);
+          //@include setText(2);
+          font-size: $fontsize-midText;
+          line-height: 2;
           margin-top: 15px;
         }
       }
@@ -85,7 +89,9 @@
         }
 
         p {
-          @include setText(2);
+          //@include setText(2);
+          font-size: $fontsize-midText;
+          line-height: 2;
           margin-top: 15px;
         }
 
@@ -200,7 +206,8 @@
     min-height: auto;
 
     &-content {
-      width: 90vw;
+      //width: 90vw;
+      width: 75vw;
       padding: 0 30px;
 
       .aboutme-summary {
@@ -208,6 +215,17 @@
 
         .aboutme-profilePic {
           display: none;
+        }
+
+        .aboutme-summary-text {
+          .aboutme-title {
+            //font-size: $fontsize-smallText;
+            font-size: 32px;
+          }
+
+          p {
+            font-size: $fontsize-smallText;
+          }
         }
       }
 
@@ -219,11 +237,30 @@
         .aboutme-text-personal {
           grid-column: 1;
           grid-row: 1;
+
+          h3 {
+            font-size: $fontsize-largeText;
+          }
+
+          p {
+            font-size: $fontsize-smallText;
+            //color: red;
+            //font-size: 50px;
+          }
         }
 
         .aboutme-text-skills {
           grid-column: 1;
           grid-row: 2;
+
+          h3 {
+            font-size: $fontsize-largeText;
+          }
+
+          .aboutme-skills-list {
+            //display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+          }
         }
       }
     }
@@ -231,9 +268,9 @@
 }
 
 @media only screen and (max-width: 420px) {
-  %h3-smallScreen {
-    font-size: 25px;
-  }
+  // %h3-smallScreen {
+  //   font-size: 25px;
+  // }
 
   .aboutme {
     &-content {
@@ -242,17 +279,21 @@
       .aboutme-text-additional {
         .aboutme-text-personal {
           h3 {
-            @extend %h3-smallScreen;
+            //@extend %h3-smallScreen;
+            //font-size: $fontsize-smallText;
           }
 
           p {
-            @include setText(1.7);
+            //@include setText(1.7);
+            //font-size: $fontsize-midText;
+            line-height: 1.7;
           }
         }
 
         .aboutme-text-skills {
           h3 {
-            @extend %h3-smallScreen;
+            //@extend %h3-smallScreen;
+            //font-size: $fontsize-smallText;
           }
         }
       }

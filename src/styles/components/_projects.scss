@@ -183,7 +183,8 @@
     justify-content: center;
 
     &-content {
-      width: 90vw;
+      //width: 90vw;
+      width: 75vw;
 
       .projects-title {
         margin: 45px 0 30px 0px;
@@ -192,6 +193,29 @@
       .projects-list {
         width: 100%;
         grid-template-columns: 1fr;
+
+        .project {
+          &-description {
+            .project-title-section {
+              .project-maintitle {
+                font-size: $fontsize-largeText;
+                //font-size: 50px;
+              }
+            }
+
+            .project-tech {
+              //font-size: $fontsize-smallText;
+              font-size: $fontsize-minText;
+              //font-size: 50px;
+            }
+
+            .project-link {
+              a {
+                font-size: $fontsize-minText;
+              }
+            }
+          }
+        }
       }
     }
   }
