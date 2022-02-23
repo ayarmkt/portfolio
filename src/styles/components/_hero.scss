@@ -84,14 +84,16 @@
 
 @media only screen and (max-width: 420px) {
   .hero {
-    height: calc(100vh - 50px);
+    height: calc(100vh);
 
     .hero-content {
-      width: 70vw;
-      transform: translateY(50px);
+      width: 75vw;
+      transform: translateY(0px);
 
       h1 {
         font-size: 50px;
+        //line-height: 1.5;
+        padding-bottom: 20px;
       }
 
       p {
