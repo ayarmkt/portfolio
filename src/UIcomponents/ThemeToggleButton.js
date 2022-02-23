@@ -5,11 +5,11 @@ import { IoSunnySharp, IoMoonSharp } from 'react-icons/io5';
 
 const ThemeToggleButton = () => {
   const uiCtx = useContext(UIContext);
-  console.log(uiCtx.isDark);
+  //console.log(uiCtx.isDark);
 
   const toggleThemeButton = (e) => {
     uiCtx.setIsDark();
-    console.log(uiCtx.isDark);
+    //console.log(uiCtx.isDark);
   };
 
   //   const systemPrefersDark = useMediaQuery()
