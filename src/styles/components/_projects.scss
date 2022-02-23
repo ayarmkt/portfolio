@@ -70,13 +70,11 @@
             height: auto;
             width: 100%;
             line-height: 1.8;
+            padding-bottom: 7px;
 
             .project-maintitle {
-              //font-size: $fontsize-largeText;
-              //font-size: 32px;
               font-size: 23px;
               font-weight: 900;
-              //color: $darkgray;
               color: $gray;
             }
 
@@ -86,23 +84,20 @@
           }
 
           .project-tech {
-            line-height: 1.8;
+            line-height: 1.5;
             font-size: $fontsize-smallText;
           }
 
           .project-link {
-            padding: 10px 0;
-            //padding: 5px 0;
+            padding: 5px 0;
 
             a {
-              //padding: 5px 10px;
-              padding: 3px 8px;
+              padding: 2px 8px;
               margin-right: 10px;
-              line-height: 1.8;
+              line-height: 1.5;
               border-radius: 5px;
               font-size: $fontsize-smallText;
               text-decoration: none;
-              //background-color: darken($lightgray, 10%);
               background-color: $lightgray;
               border: 1px solid $gray;
 
